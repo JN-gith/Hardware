@@ -4,18 +4,18 @@ Information about all parts of hardware
 ## SSDs
 Information about memory and storage
 
-###Resources
+### Resources
 Great Arcticle on HMB in NVME Drives: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7051071/
 Game Loading Compared: https://www.techspot.com/review/2116-storage-speed-game-loading/
 Newmaxx SSD Sheet: https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0
 Real Life Span of SSDs Tested (6 years old): https://techreport.com/review/27909/the-ssd-endurance-experiment-theyre-all-dead/
 
  
-###Hardware
+### Hardware
 
 Solid state drives, or SSDs, are non-volatile storage devices made up of a few basic components. The choice and combination of these components determines the drive's performance and its intended role. Basic structure of an SSD-
 
-###Controller
+### Controller
 
 Controllers are basically specialized RISC devices - reduced instruction set, in contrast to complex - that are optimized for real-time, low latency operations and lots of them (IOPS). These type of embedded devices, as made by ARM for example, are in everything - your car, your smartphone, embedded devices, etc. Most SSD controllers are based on the Cortex-R5 specifically which you can google for more information.
 
@@ -91,7 +91,7 @@ the amount of electrons within the FG determine its state
 in SLC its quite simple
 you have 2 states
 
-###coper
+### coper
 lol ok so basically it's called flash NAND because the relationship between the bit line and the word line resembles the logic of a nand gate, its used in the context of voltage and not bits. The design of the circuitry merely resembles a nand gate, and a nand gate isn't actually used as an individual component, nand flash is named by resemblance.
 this image represents a nand flash page viewed from its side, we can see that the cells are in series. In order to pull the bit line low (providing a path to ground, aswell as the cells) we have to pull all of the word lines high.
 
@@ -106,8 +106,8 @@ This is why nand flash isn't bit addressable
 ## Coolers
 
 One of the most important decisions when building your PC, is choosing the right cooler for your needs. Your cooler choice can and will also make a substantial difference in noise output/ Thermals. Buying a cooler that can handle your CPU is critical to avoiding throttling and achieving your system’s full potential. CPU Coolers fall into one of three primary categories: air, closed-loop or all-in one (AIO) coolers, or custom /open-loop cooling setups. Today we are going to be looking at which cooler you should be taking that fit's your needs and what to look for in a cooler.
-susex — 01/01/2021
-[  What To Look for In a Cooler Pt. 1 -Compatibility ]  
+
+### [  What To Look for In a Cooler Pt. 1 -Compatibility ]  
 
 Whether you’re opting for air, an AIO, or custom water loop, you need to make sure it is compatible with the rest of your system and is optimal for your needs. Several factors come into play here such as but not limited to :-
 -CPU socket
@@ -119,13 +119,13 @@ it’s important to look at specifications for what size heatsink or radiator is
 
 For liquid cooling, amount of clearance under the cooler for the RAM slots is crucial in picking the right cooler. Case manufactures tend to list the radiator mounting location and sizes
 
-[ What To Look for In a Cooler Pt. 2 - "Should I go for a liquid cooling or Air cooling?" ]
+### [ What To Look for In a Cooler Pt. 2 - "Should I go for a liquid cooling or Air cooling?" ]
 
 If price and ease of installation are your main factors then I suggest you should move onto looking for an Air Cooler. However, if you want a quieter cooler (may vary) or/and a jazzy looking cooler, then I suggest you head onto liquid cooling. Really, it's that simple
 
 There are also expandable kits out there which allow you to expand your CLC to other components like a custom loop.
 
-[  What To Look for In a Cooler Pt. 3 -Budget ]  
+### [  What To Look for In a Cooler Pt. 3 -Budget ]  
 
 This is an important factor in deciding the right cooler for you. If you plan on spending a mere 25 bucks or so on a cooler then might as well forget the thought of liquid cooling. Air is the best option out there for you. If you plan on paying mid range prices, let's say >80 then you can either look at a high end air cooler from the list that I have posted in #coolers or you can go and buy yourself an AIO (AIO list coming soon). Mid-range AIOs are plenty capable of keeping most processors within safe temperature ranges, including when overclocking. If you plan on going down the Custom Loop road and have a budget of of around the 100-200 mark then really, forget it. Custom Loops cost upwards of 500 bucks (prices may vary). Now that budget is out of the way let us move onto the next factor.
 
@@ -138,7 +138,7 @@ A larger chunk of grooved/finned metal provides more area for the heat to distri
 
 The grooved wick design looks precisely like you'd think -- it's grooved cleanly down the interior of the tube, meanwhile the sintered design carries a more foamy and porous look.
 
-###Fan Positioning & Noise Reduction 
+### Fan Positioning & Noise Reduction 
 
 Fans generate noise within a CPU cooler for a few primary reasons: Bearing type, fan size and RPM, and rattling within the cage. Of these, only rattling is unique to CPU coolers 
 
@@ -166,7 +166,7 @@ What must people need help on
 
 The notation is that you should use a checklist and search by the motherboards that fit your criteria and then ask for help on your unknowns. A lot of knowledge can be very granular and not easily accessible if you don't know what you'e looking for. All you need to know is most people don't need a ridiculously expensive motherboard to get the features they want. Remember, motherboards do not DIRECTLY impact performance! You shouldn't be compromising on the CPU choice in order to get a motherboard you won't take advantage of.
 
-[ General Resources ]
+### [ General Resources ]
 MOTHERBOARD CULTIST (Z590 + TR4 + AM4): https://docs.google.com/spreadsheets/d/1OFGHnF4_LF_JBR8K2bjvzzgvRG0mIwwWDHl5A-4D8xQ/edit?usp=sharing
 LGA1200 VRMs: https://docs.google.com/spreadsheets/d/1yPS3hj_K7EPT4RBWCyjdKNP56pnwDz-IgBc0975-FUg/edit#gid=0
 B550 VRMs: https://docs.google.com/spreadsheets/d/1PuUWroxA0HvSSipsXlB8hnYkshxD8LdeO5EA6WLdOQw/edit#gid=0
@@ -176,14 +176,14 @@ Z490 Lineup: https://docs.google.com/spreadsheets/d/1TWJGQY8HaIF-iwfSeKLIFD9WNMs
 AM4 Lineup: https://docs.google.com/spreadsheets/d/1wmsTYK9Z3-jUX5LGRoFnsZYZiW1pfiDZnKCjaXyzd1o/edit#gid=2112472504
 
 
-[ Learning about Concepts ]
+### [ Learning about Concepts ]
 Motherboard Memory Topology: https://youtu.be/3vQwGGbW1AE
 Motherboard Transient Response: https://youtu.be/ml02z3NsHfE
 Load Line Calibration (LLC): https://youtu.be/bUaP0r5-xhY
 VRM Doublers: https://youtu.be/tQjY9ni8uu4
 How VRMs actually work: https://youtu.be/oDRHV3qtSWc
 
-[ Specific Notes ]
+### [ Specific Notes ]
 While I use HWU's videos on VRM temps to gauge how bad of a board I am looking at, there is a big asterisk next to it:
 
 1. Higher layer PCB boards dissipate heat better, so the backside VRM temp would appear to be lower (since we are measuring there)
@@ -238,7 +238,7 @@ What is Gear Down Mode (GDM)? https://www.linkedin.com/pulse/what-ddr4-memory-ge
 What is DDR4 Memory Gear-Down Mode?
 Gear-Down mode is a Reliability, Availability and Serviceability (aka RAS) feature more clearly documented in the new JEDEC DDR4 Rev B spec. Gear-down mode allows the DRAM Address/Command and Control bus to use every other rising clock of the DDR4 Memory bus clock.
 
-[ Resources for Monitoring and Stress Testing Memory ]
+### [ Resources for Monitoring and Stress Testing Memory ]
 - For checking current timings on Zen: https://zentimings.protonrom.com/ 
 - For checking current timings on Comet Lake +: https://asrock-timing-configurator.software.informer.com/download/
 - For benchmarking frametimes: https://www.capframex.com/
@@ -248,7 +248,8 @@ Gear-Down mode is a Reliability, Availability and Serviceability (aka RAS) featu
 2. For hardcore stress testing: http://testmem.tz.ru/tm5.rar with profile (https://drive.google.com/file/d/1uegPn9ZuUoWxOssCP4PjMjGW9eC_1VJA/)
 3. OCCT testing (not just memory): https://www.ocbase.com/
 3. MemTest (not x86) -- Open up a couple installations each with 2000 MBs allocated: https://hcidesign.com/memtest/
-[ Basic Things to Remember ]
+
+### [ Basic Things to Remember ]
 Every manufacturer that sells RAM wants you to be able to slot your RAM in, click the power button, and then it works. So the easiest way to do this is to set looser timings and really low frequency because this ensures stability and compatibility with the rest of your system. What XMP or DOCP does is it just takes that slow speed and then runs the kit at whatever the package you bought online says it was rated for (most of the time usually). For example, our RAM kit may run 2400cl15 out of the box, and when we enable XMP, it runs at 3200cl16.
 
 Manually overclocking is where you go into the BIOS and, by hand, enter individual voltages, frequencies, and timings to maximize the performance out of your RAM kit. This can take a lot of hours to tune the timings and voltages to stable levels and then stress testing the system--not recommended for beginners.
@@ -271,7 +272,7 @@ Brands like Corsair, G.skill, etc. take the memory ICs they get from Samsung, ch
 - Surface mount memory dimms (SMD dimms for some reason) reduce the parasitics
 - tREFI controls the maximum time betweem DRAM bank refreshes. It's how the RAM stores info before being touched again by the CPU
  
-[ Advanced Topics ]
+### [ Advanced Topics ]
 Motherboard Memory Topology and RAM Configuration Optimization: https://youtu.be/3vQwGGbW1AE
 XMP Performance Tested: https://www.youtube.com/watch?v=25NW8cHNrgA
 Memory Ranks Tested (properly): https://youtu.be/1ZbxMh5xUOg
@@ -283,7 +284,7 @@ PCBs by Buildzoid: https://youtu.be/ZJDXsoYKZaY
 BZ on FCLK on Ryzen 3000: https://youtu.be/nugwAOvijHQ
 BZ Pt2: https://youtu.be/10pYf9wqFFY
 
-[ RAM Overclocking/Improvement Benefits ]
+### [ RAM Overclocking/Improvement Benefits ]
 GamerNexus simple (Frequency and tCL) testing: https://youtu.be/9IY_KlkQK1Q
 RAM on Zen+: https://www.computerbase.de/2019-03/amd-ryzen-cpu-ddr4-ram/2/
 3900X/5900X testing:< https://imgur.com/A7CYHrj%3E
@@ -291,13 +292,13 @@ RAM on Zen+: https://www.computerbase.de/2019-03/amd-ryzen-cpu-ddr4-ram/2/
 Quick link to testing by KingFaris: https://kingfaris.co.uk/ram/7
 Different RAM speeds and timings tested across some games: https://docs.google.com/spreadsheets/d/1xTJUq4R3CeEooYdHsdTARmBaw-po8NGoRrbL333BQBc/edit?usp=sharing
 
-[ General Resources ]
+### [ General Resources ]
 
  DDR4 revisions of PCBs: https://cdn.discordapp.com/attachments/757967245988331654/818819141804228648/ddr4pcbs-v1-prev.png
 
 B-Die XMP Predictions: https://docs.google.com/spreadsheets/d/1Xz_rQgNFQF3Dm0yHJBzldVkal5jmfI9Ug9tnpjky5Bc/edit#gid=0
 
-[ Notes about Certain Kits ]
+### [ Notes about Certain Kits ]
 
 - Samsung C-die scales negatively past 1.35v
 - Crucial does not use any Hynix memory ICs
@@ -309,13 +310,13 @@ B-Die XMP Predictions: https://docs.google.com/spreadsheets/d/1Xz_rQgNFQF3Dm0yHJ
 RAM Tierlist for Single Rank Dimms
 https://media.discordapp.net/attachments/788973277916692490/803468502358294538/unknown.png
 
-[ Notable 2x8 Kits ]
+### [ Notable 2x8 Kits ]
 Micron Rev.E - Crucial Ballistix 2x8GB @ 3000cl15 -- You bought an B460 board...
 Micron Rev.E - Crucial Ballistix 2x8GB @ 3200cl16 -- Cheap kit for overclocking your frequency a little bit
 Micron Rev.E - Crucial Ballistix 2x8GB @ 3600cl16 -- Higher bin of the 3200cl16 variant, consider this if it is on sale
 Samsung B - Team T-Force DARK PRO 2x8GB @ 3466cl16 -- Cheap and non-reject kit of Samsung B-die (better than above kits)
 Samsung B - Team T-Force DARK PRO 2x8GB @ 3200cl14 -- Tightest bin at this frequency
-[ Notable 2x16 Kits ]
+### [ Notable 2x16 Kits ]
 Low: https://pcpartpicker.com/product/BZwqqs/gskill-ripjaws-v-series-32-gb-2-x-16-gb-ddr4-3200-cl14-memory-f4-3200c14d-32gvk
 Higher: 
 RGB: https://pcpartpicker.com/product/Y9jNnQ/gskill-trident-z-rgb-32-gb-2-x-16-gb-ddr4-4000-cl17-memory-f4-4000c17d-32gtzrb
@@ -406,7 +407,8 @@ If a manufacturer or brand didn't bother to even get an 80 Plus or ETA efficienc
 ⠀⠀
 ### How to Learn about Power Supplies
 My first and greatest advice is to learn about electronics before even glossing into the channels below. Power supplies are very complicated, and there's not a lot of modern day circuit diagrams of the exact units you're buying that you could reverse-think about how it works. Resistors, shotky diodes, inductors, transformers, operational amplifiers, swtiching MOSFETs, capacitors, etc. can be all arranged in different ways or "topologies". Please read #electrical-engineering on some very simple things, and I highly suggesting taking a look at various physics sources before even diving into power supplies. Once you learn more in-depth about the units, you may realize that it's just the same thing over and over again, and the only fun comes when there is a weird unit that is made.
-[ What To Look for In a Power Supply Pt. 1 - Wattage ]
+
+### [ What To Look for In a Power Supply Pt. 1 - Wattage ]
 First thing we are going to tackle is the easiest metric to look for in PSUs is wattage. It is what determines how much power it takes from the wall, converts it to DC, and then sends to the rest of the components. You definitely do not want to be right up against what it is continuously rated for. Sometimes you will trip OPP (over-power protection) and cause the power supply to shut down. If the PSU is not good quality, you can get far worse problems then just shutting down. 
 
 Power supplies are rated in continuous operation (as they should be). Never get a power supply only rated in peak wattage (there are standards for what it means to continuously output power)--which means they can technically draw more power from the wall than what the box says--you want to get more wattage. And what happens if you upgrade to more power hungry parts down the road or want to overclock? Don't skimp out on wattage.
@@ -422,11 +424,13 @@ Let's say your system would--at peak--draw 400W of DC power, but the PSU draws A
 So what does this mean for me? Don't absurdly overshoot your power supply wattage because your system will actually become less efficient (not much of a difference, a couple bucks over the years). If you're already considering a below recommended by first-party wattage, then overshooting a little is a good idea. 
 
 This also may be a good idea if you plan on keeping your power supply for a really long time. For myself, one of the builds I have will pull maybe 350w max at a certain time, but I have a 750w unit. Reason is because I am going to keep that unit for more than a decade and go through a couple upgrade cycles on a single power supply. Let's move to efficiency and certification.
-[ What To Look for In a Power Supply Pt. 2 - Efficiency ]
+
+### [ What To Look for In a Power Supply Pt. 2 - Efficiency ]
 Let's get this out of the way first...POWER SUPPLY EFFICIENCY IS NOT "CAUSATED" TO QUALITY OF A PARTICULAR UNIT. Sorry for that. Many people are under the misguided belief that a gold efficiency rated unit is better than a bronze unit straight up; they couldn't be anything further than the truth. There are platinum rated units that are garbage, and there are bronze units that are really decent.
 
 Coincidentally though, you shouldn't be really looking to anything under 80+ (White) efficiency (refer back to the first message by @Mitja). Some may say that higher efficiency power supplies are usually better quality. In some regards, they can be right, but the more pressing trend is the swell of bad quality units out there. You can buy readily available Gold rated PSUs that have positive reviews on distributors sites that shouldn't be bought because of the glaring issues. It is safer to never assume anything based on efficiency, and just go by model. If it just so happens that you (or someone that helped you) find a good quality unit, and it is higher efficiency, awesome. Depending on your electric bill costs per month, you might ever say money over the long term. A higher efficiency unit may also be worthwhile if the cost per month is so high that you will gain money back over the long run, but like I said before, efficiency does not equate quality. We still have to look for a good quality unit.
-[ What To Look for in a Power Supply Pt. 3 - Modularity ]
+
+### [ What To Look for in a Power Supply Pt. 3 - Modularity ]
 Modularity in a power supply refers to how the connections or cables are or aren't secured to a power supply. Simply putting, we have three types of modularity: none, semi, and fully-modular. Like how efficiency wasn't that much relevant, modularity isn't either. There are good and bad modular power supplies. Modularity only refers the cables, not the quality. Here is an infographic on it if you prefer visuals: https://i.imgur.com/F5i8APH.png
 
 In a non-modular power supply, every cable is permanently connected to the power supply. This is often the cheapest option, but it could make harder to cable manage because you have every single cable with often time splitters on some cables.
@@ -435,21 +439,22 @@ In a fully-modular power supply, every cable is not attached and can be found in
 
 All in all, there is no performance or quality difference if it is modular or not--it is just how the cables are connected.
 
-[ What to Look for in a Power Supply Pt. 4 - Protections ]
+### [ What to Look for in a Power Supply Pt. 4 - Protections ]
 Protections in a power supply well are...protections. In the case of failure, or a transient event, or something abnormal, it is the presence and proper setting of this features that both protect the power supply and the rest of the system. It is a good idea to have all the protections and have them all properly set. Each unit is different and without careful analysis, you won't know that even though a unit like while the EVGA G3 is a good unit, its protections are set very very poorly to the point where it can melt. You can read about the different types of protections here: https://linustechtips.com/topic/1154199-psu-protections-what-do-they-help-against-and-how-do-they-work
 
 For my own list, everything single protection is required on a higher budget (and set properly!), but on lower budgets, OCP on the 12v main rail can be dismissed if the unit has a good enough set OPP. However, base line is usually all the protections set correctly.
-[ What to Look for in a Power Supply Pt. 5 - Topologies ] 
+
+### [ What to Look for in a Power Supply Pt. 5 - Topologies ] 
 
 Please DM me for links...This is not something I should readily disseminate
 
-[ What to Look for in a Power Supply Pt. 6 - Regulations ]
+### [ What to Look for in a Power Supply Pt. 6 - Regulations ]
 There are three primary approaches on how to take the rectified and relatively flatline DC current and separate it between the 12v, 5v, and 3.3v rails: group regulation, double mag amplification, and DC-DC conversion. Do not suggest group regulation for any system with a high power video card in it as it can become a fire hazard. You can read more about the differences between each here: https://linustechtips.com/main/topic/1122694-why-group-regulated-units-shouldnt-be-boughtsold-in-2019-and-on/
 
-[ What to Look for in a Power Supply Pt. 7 - Rails ]
+### [ What to Look for in a Power Supply Pt. 7 - Rails ]
 Rails are just how the traces or wires connecting to different connectors. Most units have a single 12v main rail and an extra one for standby power plus the minor rails. I am going to put this bluntly....Unless you pair and overclock a CPU to the max and max out the power delivery on a single PCIe cable, multi-rail power supplies are no way inferior to single rail (and if you did, well then, just add some extra PCIe cables). You can read more about it here: http://www.jonnyguru.com/forums/showthread.php?3990-Single-vs-Multiple-12V-rails-The-splitting-of-the-12V-rail
 
-[ What to Look for in a Power Supply Pt. 8 - Reviews ]
+### [ What to Look for in a Power Supply Pt. 8 - Reviews ]
 If you don't have an oscilloscope plus an absurd amount of testing equipment, you cannot fully determine if a power supply is good or not. You can take it apart and examine each component; however, you need to look at real world performance to see if the electrolytic capacitors and such really live up to what the box says. For example, even though the RMx is on the same platform as Revolution DF (CWT GPU), it is heavily modified to the point where it literally performs different.
 
 On that note, DO NOT attempt to dissect, disassemble, or otherwise interact with the internal components of a power supply unless you REALLY know what you're doing. Power supplies have capacitors in them which are powerful enough to almost kill you, even when not powered (because they can hold electrons in idle). If you don't know how to safely discharge a power supply, do not even open it.
@@ -458,7 +463,7 @@ This brings us to how do you know if one is good, and you don't know what to loo
 
 It is of the uttermost importance that you gain knowledge from people who know what they are doing. Websites like Tom's Hardware (Aris from Cybernetics) and Jonnyguru have electrical engineers who spend each day with units, knowing how each one works inside and out. Those are the people you trust.
 
-[ What to Look for in a Power Supply Pt. 9 - Conclusion ]
+### [ What to Look for in a Power Supply Pt. 9 - Conclusion ]
 Power supplies are very complex electrical systems with different avenues on to achieve the goal of changing the AC from the wall to the DC which feeds the system. This was a very shallow walk across what you should be looking for or rather avoiding in a power supply. You should have attained the basic enough knowledge to know when you definitely should not buy a power supply because of its bare or "interesting" internals, but there is so much more to learn. Look in  #specific-notes for more information.
 
 ### Extra Resources about the above topics
