@@ -132,7 +132,7 @@ This is an important factor in deciding the right cooler for you. If you plan on
 
 A larger chunk of grooved/finned metal provides more area for the heat to distribute itself. Big being better, in this case - just make sure you choose something that makes sense for your system. Grabbing the heaviest heatsink out there won't matter if it doesn't fit in the case and puts too much strain on the CPU or motherboard. Just grabbing any massive aluminum heatsink is probably not for the best, of course, given the importance of heatpipes, surface smoothness, and copper's place in the world. Surface roughness is a measurement of the base plate's smoothness (measured in microinches) and overall ability to connect directly with the surface of the CPU. In a perfect world, there would be no thermalpaste and the copper base plates would come in direct, flush, perfectly smooth contact with the CPU. The reason we even need thermalpaste is because microscopic divets (what are divets) in the surface of the connecting materials create air pockets. Air gets trapped in these pockets at high temperatures, causing uneven thermal distribution and resulting in hotter core temps. A thermal interface, while significantly lower thermal conductivity than pure copper or aluminum, provides an air-tight sealant between the divets that allows heat to cleanly migrate from the CPU surface to the cooler base plate. Smoother is better. Thermalpaste's thermal conductivity will impact the temperature moderately, but not normally enough where it's justifiable to spend lots of money on thermal compound
 
-###Heatpipe Exposure and Wick / Capillary Design
+### Heatpipe Exposure and Wick / Capillary Design
 
  There are two prevailing chamber designs in the CPU heatsink market: Vapor chambers and traditional capillary heatpipes. We'll cover the latter first due to their dominance. As this image shows so well, a heatpipe contains a very small amount of coolant or liquid (normally a mix of ammonium and ethanol or distilled water) which undergoes chemical phase changes - this is the catalyst for our reduced temperatures. The evaporator (CPU surface region) evaporates the liquid, where it travels in gaseous form toward the condensor. The condensor then—you guessed it—condenses the gas back to liquid form, where it travels down grooved, sintered, metal mesh, or composite tubing as a result of capillary action.
 
@@ -146,7 +146,7 @@ Rattling is normally a result of poor fan positioning and design. The Tuniq Towe
 
 ## Motherboards 101
 
-###How To Pick A Motherboard by @Stonkgis & other BAPO Regulars
+### How To Pick A Motherboard by @Stonkgis & other BAPO Regulars
 There are three steps to pick a motherboard
 1. Remove all the garbage motherboards. This includes Biostar, motherboards not compatible (socket wise), motherboards that will melt with your CPU in it, and motherboards with no rear IO.
 2. Go down the below checklist laid out below and determine what features you need
@@ -254,7 +254,7 @@ Every manufacturer that sells RAM wants you to be able to slot your RAM in, clic
 
 Manually overclocking is where you go into the BIOS and, by hand, enter individual voltages, frequencies, and timings to maximize the performance out of your RAM kit. This can take a lot of hours to tune the timings and voltages to stable levels and then stress testing the system--not recommended for beginners.
  
-###There are three types of users that buy RAM:
+### There are three types of users that buy RAM:
 1. No manual overclock, yes XMP -> Regular 3000/3200C15/16 kits (SpecTek, MFR, AFR, etc. -- can be a host of different dies)
 2. Yes, little manual overclock, no XMP -> Rev. E /SR Rev. B / CJR / DJR / Cheap B-die
 3. People who want to overclock a lot and get the most performance -> B die.
@@ -345,7 +345,6 @@ Goodram used to be meh, is fine now (well... however fine C-died can get, howeve
 Timetec is highly praised
 WARNING this doesn't necessarily apply to non-OEM RAM with fancy heatspreaders and a fancy XMP
  
-AuroraWolf — 03/25/2021
 The tRAS rule is false, https://discord.com/channels/586604427063066624/757967245988331654/824228062366531615
 
 ## Identify your Corsair sticks:
