@@ -349,46 +349,49 @@ The tRAS rule is false, https://discord.com/channels/586604427063066624/75796724
 
 ## Identify your Corsair sticks:
 
-3.20 Micron 4Gbit Rev.A Presumed
-3.21 Micron 4Gbit Rev.B Confirmed
-3.22 Micron 4Gbit Rev.E* Speculated
-3.22 Micron 4Gbit Rev.F* Confirmed
-3.31 Micron 8Gbit Rev.B Confirmed
-3.31 Micron 8Gbit Rev.D Presumed
-3.31 Micron 8Gbit Rev.E Confirmed
-3.32 Micron 8Gbit Rev.H Confirmed
-3.32 Micron ??? wk27 '17 2x8GB 2666 16-18-18-36 1.2V
-3.32 Micron ??? wk46 '19 2x8GB 3000 15-17-17-35 1.35V
-3.40 Micron 16Gbit Rev.B (2133 bin) Confirmed
-3.41 Micron ???  wk44 '20 2x16GB 3600 18-22-22-42 1.35V
-3.43 Micron ??? wk43 '20 2x16GB 3200 16-19-19-36 1.35V
-3.44 Micron 16Gbit Rev.B (2666 bin) Confirmed
-4.14 Samsung 4Gbit D-die (4x16) Confirmed
-4.23 Samsung 4Gbit D-die Confirmed
-4.24 Samsung 4Gbit E-die Confirmed
-4.21 Samsung 8Gbit B-die (4x16) Presumed
-4.31 Samsung 8Gbit B-die Confirmed
-4.32 Samsung 8Gbit C-Die Confirmed
-4.49 Samsung 16Gbit M-die Presumed
-4.40 Samsung 16Gbit A-die Speculated
-5.29 Hynix 4Gbit MFR Confirmed
-5.20 Hynix 4Gbit AFR Confirmed
-5.21 Hynix 4Gbit BJR Speculated
-5.22 Hynix 4Gbit CJR Presumed
-5.39 Hynix 8Gbit MFR Confirmed
-5.30 Hynix 8Gbit AFR Confirmed
-5.31  Hynix 8Gbit "BFR"??? Speculated
-5.32 Hynix 8Gbit CJR Confirmed
-5.33 Hynix 8Gbit DJR Presumed
-5.38 Hynix 8Gbit JJR Presumed
-5.49 Hynix 16Gbit MJR Presumed
-8.20 Nanya 4Gbit Rev.A Speculated
-8.21^ Nanya 4Gbit Rev.B Presumed
-8.23^ Nanya 4Gbit Rev.D Presumed
-8.30 Nanya 8Gbit Rev.A Presumed
-8.31 Nanya 8Gbit Rev.B Confirmed
-Especially with Micron, Corsair version numbers are sometimes weird. Confirmed means an IC has been seen under a version number, not that it can't also cover something else.
 
+  | Version        | IC                                                           | Confirmed/presumed?              |
+  | -------------- | ------------------------------------------------------------ | -------------------------------- |
+  |  3.20          |   Micron 4Gbit Rev.A                                         |   Presumed                       |
+  |  3.21          |   Micron 4Gbit Rev.B                                         |   Confirmed                      | 
+  |  3.22          |   Micron 4Gbit Rev.E*                                        |   Speculated                     |                      
+  |  3.22          |   Micron 4Gbit Rev.F*                                        |   Confirmed                      |
+  |  3.31          |   Micron 8Gbit Rev.B                                         |   Confirmed                      |
+  |  3.31          |   Micron 8Gbit Rev.D                                         |   Presumed                       |
+  |  3.31          |   Micron 8Gbit Rev.E                                         |   Confirmed                      |
+  |  3.32          |   Micron 8Gbit Rev.H                                         |   Confirmed                      |
+  |  3.32          |   Micron ??? wk27 '17 2x8GB 2666 16-18-18-36 1.2V            |   ?                              |            
+  |  3.32          |   Micron ??? wk46 '19 2x8GB 3000 15-17-17-35 1.35V           |   ?                              |
+  |  3.40          |   Micron 16Gbit Rev.B (2133 bin)                             |   Confirmed                      |
+  |  3.41          |   Micron ???  wk44 '20 2x16GB 3600 18-22-22-42 1.35V         |   ?                              |
+  |  3.43          |   Micron ??? wk43 '20 2x16GB 3200 16-19-19-36 1.35V          |   ?                              |
+  |  3.44          |   Micron 16Gbit Rev.B (2666 bin)                             |   Confirmed                      |
+  |  4.14          |   Samsung 4Gbit D-die (4x16)                                 |   Confirmed                      |
+  |  4.23          |   Samsung 4Gbit D-die                                        |   Confirmed                      |
+  |  4.24          |   Samsung 4Gbit E-die                                        |   Confirmed                      |
+  |  4.21          |   Samsung 8Gbit B-die (4x16)                                 |   Presumed                       |
+  |  4.31          |   Samsung 8Gbit B-die                                        |   Confirmed                      |
+  |  4.32          |   Samsung 8Gbit C-Die                                        |   Confirmed                      |
+  |  4.49          |   Samsung 16Gbit M-die                                       |   Presumed                       |
+  |  4.40          |   Samsung 16Gbit A-die                                       |   Speculated                     |
+  |  5.29          |   Hynix 4Gbit MFR                                            |   Confirmed                      |
+  |  5.20          |   Hynix 4Gbit AFR                                            |   Confirmed                      |
+  |  5.21          |   Hynix 4Gbit BJR                                            |   Speculate                      |
+  |  5.22          |   Hynix 4Gbit CJR                                            |   Presumed                       |
+  |  5.39          |   Hynix 8Gbit MFR                                            |   Confirmed                      |
+  |  5.30          |   Hynix 8Gbit AFR                                            |   Confirmed                      |
+  |  5.31          |   Hynix 8Gbit "BFR"???                                       |   Speculated                     |
+  |  5.32          |   Hynix 8Gbit CJR                                            |   Confirmed                      |
+  |  5.33          |   Hynix 8Gbit DJR                                            |   Presumed                       |
+  |  5.38          |   Hynix 8Gbit JJR                                            |   Presumed                       |
+  |  5.49          |   Hynix 16Gbit MJR                                           |   Presumed                       |
+  |  8.20          |   Nanya 4Gbit Rev.A                                          |   Speculated                     |
+  |  8.21^         |   Nanya 4Gbit Rev.B                                          |   Presumed                       |
+  |  8.23^         |   Nanya 4Gbit Rev.D                                          |   Presumed                       |
+  |  8.30          |   Nanya 8Gbit Rev.A                                          |   Presumed                       |
+  |   8.31         |   Nanya 8Gbit Rev.B                                          |   Confirmed                      |
+  
+  
 *Rev.F is confirmed to come in ver3.22 sticks, but that doesn't leave a gap for Rev.E. It's wildly guessed that they may both appear under 3.22.
 ^Version number seen in the wild, IC unconfirmed.
 
