@@ -45,7 +45,7 @@ Components of a controller-
 
 10. ECC Engine- Error Checking & Correction are a key part of today’s SSD. ECC will correct up to a certain number of bits per block of data
 
-###Volatile memory (SRAM/DRAM)
+### Volatile memory (SRAM/DRAM)
 
 Memory is volatile when it loses its data or contents on power loss. In the context of SSDs volatile memory is utilized to temporarily cache the controller's firmware, store information from read-only memory for debugging, manage controller functions, temporarily store boot code, and store various metadata (data about data) for use with the FTL. Enterprise drives often have power loss protection but it is not often found in consumer drives.
 https://en.wikipedia.org/wiki/Static_random-access_memory
