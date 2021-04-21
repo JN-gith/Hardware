@@ -91,18 +91,6 @@ the amount of electrons within the FG determine its state
 in SLC its quite simple
 you have 2 states
 
-### coper
-lol ok so basically it's called flash NAND because the relationship between the bit line and the word line resembles the logic of a nand gate, its used in the context of voltage and not bits. The design of the circuitry merely resembles a nand gate, and a nand gate isn't actually used as an individual component, nand flash is named by resemblance.
-this image represents a nand flash page viewed from its side, we can see that the cells are in series. In order to pull the bit line low (providing a path to ground, aswell as the cells) we have to pull all of the word lines high.
-
-and if you compare that to a nand logic table, and imagine the state of being pulled high as 1, and the state of being pulled low as 0 the relationship between the word line and the bit line resembles a logical nand gate
-
-in order for the bitline to pulled low, all word lines have to be pulled high. Once again analogous to in order for the output to be zero, all inputs must be one
-
-When all of the word lines are pulled high, it allows electrons to flow through the bit line (Through source/drain/N-channel), because all of the control gates are positively charged, allowing current to pass through the cells.
-The current flowing from the bit line pulls the bit line low.
-This is why nand flash isn't bit addressable
-
 ## Coolers
 
 One of the most important decisions when building your PC, is choosing the right cooler for your needs. Your cooler choice can and will also make a substantial difference in noise output/ Thermals. Buying a cooler that can handle your CPU is critical to avoiding throttling and achieving your system’s full potential. CPU Coolers fall into one of three primary categories: air, closed-loop or all-in one (AIO) coolers, or custom /open-loop cooling setups. Today we are going to be looking at which cooler you should be taking that fit's your needs and what to look for in a cooler.
@@ -448,10 +436,55 @@ For my own list, everything single protection is required on a higher budget (an
 
 ### [ What to Look for in a Power Supply Pt. 5 - Topologies ] 
 
-Please DM me for links...This is not something I should readily disseminate
+There's 3 commonly seen topologies in modern day psu's. Double Forward, Active Clamp Reset Forward (ACRF) and LLC Resonant.
+
+Double forward or two switch forward is a single forward configuration with 2, rather than 1 MOSFET to keep the core from running into saturation. Upsides of this is that it's cheap, but that's about it. The downsides are it only scaling up to 750w, the fact it's not meant for high efficiency PSUs, as it generally only goes up to 80+ bronze and due to hard switching the unit is more likely to whine. Worse transient response compared to LLC.
+
+Active Clamp Reset Forward (ACRF) is a topology close to Double forward, but unlike Double forward is able to continue switching without load being applied, making it more efficient, but still use hard switching. mostly produced by FSP and seen in units like the Pure Power 11 350w =>. Upsides to this is that it's cheaper than LLC. But unlike DF can scale up to 1000w. Downsides are that it is more expensive than DF, efficient enough only to meet 80+ gold, due to hard switching likely to whine, but less than Double forward and mediocre design cause worse transient response.
+
+LLC stands for L (inductor), L (transformer primary which is an inductor, too) and C (capacitor). There are two inductors (LL) and a capacitor (C) used which form a resonant circuit . It's made out of 5 parts, in case of a Half-bridge (two switching FETs, transformer, inductor and capacitor).  Upsides are that LLC is efficient enough to meet up to 80+ Titanium, low chance of whining unless the unit has very poor build quality, high scaling in wattage; up to 2000w+.
 
 ### [ What to Look for in a Power Supply Pt. 6 - Regulations ]
-There are three primary approaches on how to take the rectified and relatively flatline DC current and separate it between the 12v, 5v, and 3.3v rails: group regulation, double mag amplification, and DC-DC conversion. Do not suggest group regulation for any system with a high power video card in it as it can become a fire hazard. You can read more about the differences between each here: https://linustechtips.com/main/topic/1122694-why-group-regulated-units-shouldnt-be-boughtsold-in-2019-and-on/
+
+ [Group Regulation]
+
+Luke Savenije went into group regulation and why it's a problem before in the link below. It uses two coils, a big and a smaller one. The big one will regulate 12v and 5v, while the smaller one will regulate 3.3v. Thus, because the controller tracks both 12v and 5v rails as a whole, in crossload situations (if the load on one of them is high, while the other is low) voltages can go out of nominal (5% tolerance by ATX specifications). Specifically, This is common situation with modern PCs that, first, support C6/C7 sleep states, in which 5V rail get almost no load while 12V rail still loads relatively high, and second, modern PCs generally don’t load 5V rail much even when not in standby, because the only hardware that still uses it are HDDs and SATA SSDs, while 12V rail can be loaded very high, especially with high-end GPUs. This is especially troublesome with fast peaks of modern GPUs, which switch between 50 and 450 Watt multiple times per second. If the output capacitors can not buffer that (particularly in older units), the main regulator has to follow those peaks - altering also the 5 Volt output voltage with it. This leads to strong 5 Volt fluctuations even if there is little load on the rail.
+The only upside is that it's cheap to produce, but on the other hand voltage can easily get out of spec due to regulating 12v and 5v together, generally doesn't meet c6/c7 sleep states or can’t keep voltages in specs in crossload situations associated with them, not recommended for anything beyond an APU system .
+
+![afbeelding](https://user-images.githubusercontent.com/76516169/115608984-42651d00-a2e7-11eb-92ac-5f742e6f4c05.png)
+
+https://linustechtips.com/main/topic/1122694-why-group-regulated-units-shouldnt-be-boughtsold-in-2019-and-on/
+
+[Double Mag Amp]
+
+Double mag amp is one of the two ways of an "independent" regulation, in this case regulated from the secondary winding, using an inductor to step down the current to either 5v or 3.3v. This is relatively uncommon with the introduction of DC-DC, since this is less efficient. An example where this is still used would be Seasonic's S12iii. Also, it can not work with an unloaded output (luckily a situation that doesn’t occur in a normal PC). The picture below marks the 3 coils compared to two on group regulation, by which you can see it's a double mag amp (in this case the s12 based corsair TX 80+) 
+Upsides are that it's cheap, and unlike GR is individually regulated. Downsides are it needing needs more load to work, hence generally not coming higher than 80+ bronze, low efficiency compared to DC-DC.
+
+![afbeelding](https://user-images.githubusercontent.com/76516169/115609103-66286300-a2e7-11eb-9e7d-4dd11349145a.png)
+
+[DC-DC]
+
+DC-DC uses a similar, yet quite different technique to double mag amp. it does share that it uses independent regulation, but does it in a different way. It uses buck step-down converters to lower the voltage directly from 12v to 5v or 3.3v. This is more efficient, and needs less load to function. LLC PSUs can even work properly without any hardware attached on a rail, if necessary. On the picture below i marked a dc-dc converter, in this case on a Seasonic Focus PX.
+Upsides are it also being individually regulated, very efficient, since it can function with less load, most common in modern (often higher quality) PSUs.
+The only downside is it being expensive.
+
+![afbeelding](https://user-images.githubusercontent.com/76516169/115609450-d505bc00-a2e7-11eb-8893-83735c563063.png)
+
+[Conclusion]
+
+In the most ideal situation you get a DC-DC unit with an LLC Resonant Converter, but due to budget this might not always be possible.
+APU system: preferably DC-DC, any topology
+Low-end gaming system: DC-DC, ACRF or LLC
+midrange-high end gaming system: DC-DC with LLC 
+
+[Sources:]
+https://www.ti.com/seclit/ml/slup263/slup263.pdf
+https://www.vishay.com/docs/91616/twoswitch.pdf
+https://www.tomshardware.com/reviews/power-supplies-101,4193-14.html
+https://www.techpowerup.com/articles/overclocking/psu/160/5
+https://www.anandtech.com/show/2450/3
+https://www.relaxedtech.com/reviews/seasonic/focus-plus-ssr-850px/1
+http://www.ti.com/lit/ml/slup129/slup129.pdf 
 
 ### [ What to Look for in a Power Supply Pt. 7 - Rails ]
 Rails are just how the traces or wires connecting to different connectors. Most units have a single 12v main rail and an extra one for standby power plus the minor rails. I am going to put this bluntly....Unless you pair and overclock a CPU to the max and max out the power delivery on a single PCIe cable, multi-rail power supplies are no way inferior to single rail (and if you did, well then, just add some extra PCIe cables). You can read more about it here: http://www.jonnyguru.com/forums/showthread.php?3990-Single-vs-Multiple-12V-rails-The-splitting-of-the-12V-rail
