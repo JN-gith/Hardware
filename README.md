@@ -82,12 +82,6 @@ An SSD’s capacity is determined by how many bits it can store per cell, hence 
 SLC has the least cell density, so operations like programming and erasing are less complex. For example, when a cell contains one bit, its bit state can only read as a 1 or 0.
 By introducing multiple bits per cell you create a larger margin for error.
 
-Gate oxide breakdown is also one of the reasons Flash storage breaks down
-electrons get into the oxide, burrow themsleves there and form holes and then allow elctron passage and arcing of electricity the next time the gate is proided with power
-the amount of electrons within the FG determine its state
-in SLC its quite simple
-you have 2 states
-
 ## Coolers
 
 One of the most important decisions when building your PC, is choosing the right cooler for your needs. Your cooler choice can and will also make a substantial difference in noise output/ Thermals. Buying a cooler that can handle your CPU is critical to avoiding throttling and achieving your system’s full potential. CPU Coolers fall into one of three primary categories: air, closed-loop or all-in one (AIO) coolers, or custom /open-loop cooling setups. Today we are going to be looking at which cooler you should be taking that fit's your needs and what to look for in a cooler.
