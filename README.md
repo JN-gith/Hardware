@@ -109,13 +109,13 @@ For liquid cooling, amount of clearance under the cooler for the RAM slots is cr
 
 ### [ What To Look for In a Cooler Pt. 2 - "Should I go for a liquid cooling or Air cooling?" ]
 
-If price and ease of installation are your main factors then I suggest you should move onto looking for an Air Cooler. However, if you want a quieter cooler (may vary) or/and a jazzy looking cooler, then I suggest you head onto liquid cooling. Really, it's that simple
+If price and ease of installation are your main factors then I suggest you should move onto looking for an Air Cooler. However, if you want a quieter cooler (may vary) or/and a jazzy looking cooler, then I suggest you head onto liquid cooling. Really, it's that simple. For relatively high overclocks I'd also recommend going with liquid, due to the way water transfers and absorbs heat compared to fins in a heatsink. You would be looking at 280mm AIO's for 6-8 cores, and 360mm/custom loop/chiller setup for 10+ cores. Note that there are CPU's with an enormous amount of cores that clock fairly high, even a very good AIO won't keep these cool. So do research in advance.
 
 There are also expandable kits out there which allow you to expand your CLC to other components like a custom loop.
 
 ### [  What To Look for In a Cooler Pt. 3 -Budget ]  
 
-This is an important factor in deciding the right cooler for you. If you plan on spending a mere 25 bucks or so on a cooler then might as well forget the thought of liquid cooling. Air is the best option out there for you. If you plan on paying mid range prices, let's say >80 then you can either look at a high end air cooler from the list that I have posted in #coolers or you can go and buy yourself an AIO (AIO list coming soon). Mid-range AIOs are plenty capable of keeping most processors within safe temperature ranges, including when overclocking. If you plan on going down the Custom Loop road and have a budget of of around the 100-200 mark then really, forget it. Custom Loops cost upwards of 500 bucks (prices may vary). Now that budget is out of the way let us move onto the next factor.
+This is an important factor in deciding the right cooler for you. If you plan on spending less than $80 or so on a cooler then might as well forget the thought of liquid cooling. Air is the best option out there for you. If you plan on paying mid range prices, let's say $80+ then you can either look at a high end air cooler or you can go and buy yourself an AIO. Mid-range AIOs are plenty capable of keeping most processors within safe temperature ranges, including when overclocking. If you plan on going down the Custom Loop road and have a budget of of around the 100-200 mark then really, forget it. Custom Loops of high quality cost upwards of 500 bucks (prices may vary). Now that budget is out of the way let us move onto the next factor.
 
 
 A larger chunk of grooved/finned metal provides more area for the heat to distribute itself. Big being better, in this case - just make sure you choose something that makes sense for your system. Grabbing the heaviest heatsink out there won't matter if it doesn't fit in the case and puts too much strain on the CPU or motherboard. Just grabbing any massive aluminum heatsink is probably not for the best, of course, given the importance of heatpipes, surface smoothness, and copper's place in the world. Surface roughness is a measurement of the base plate's smoothness (measured in microinches) and overall ability to connect directly with the surface of the CPU. In a perfect world, there would be no thermalpaste and the copper base plates would come in direct, flush, perfectly smooth contact with the CPU. The reason we even need thermalpaste is because microscopic divets (what are divets) in the surface of the connecting materials create air pockets. Air gets trapped in these pockets at high temperatures, causing uneven thermal distribution and resulting in hotter core temps. A thermal interface, while significantly lower thermal conductivity than pure copper or aluminum, provides an air-tight sealant between the divets that allows heat to cleanly migrate from the CPU surface to the cooler base plate. Smoother is better. Thermalpaste's thermal conductivity will impact the temperature moderately, but not normally enough where it's justifiable to spend lots of money on thermal compound
@@ -134,7 +134,7 @@ Rattling is normally a result of poor fan positioning and design. The Tuniq Towe
 
 ## Motherboards 101
 
-### How To Pick A Motherboard by @Stonkgis & other BAPO Regulars
+### How To Pick A Motherboard 
 There are three steps to pick a motherboard
 1. Remove all the garbage motherboards. This includes Biostar, motherboards not compatible (socket wise), motherboards that will melt with your CPU in it, and motherboards with no rear IO.
 2. Go down the below checklist laid out below and determine what features you need
@@ -146,7 +146,7 @@ There are three steps to pick a motherboard
 - Number and placement of expansion and M.2 slots
 - I guess looks too
 - Price
-What must people need help on
+What most people need help on
 - Quality of VRMs and heatsinks (relating to your specific CPU and how much you're overclocking it. Advice here, get a motherboard that won't thermal throttle your processor or easily degrade, and after that, it doesn't matter if you're not overclocking)
 - Memory topology (or how well you can overclock your RAM if you want to)
 - RGB compatibility and header amount/type
@@ -181,7 +181,7 @@ While I use HWU's videos on VRM temps to gauge how bad of a board I am looking a
 5. Doesn't actually tell us transient response, voltage regulation, nor ripple supression
 
 Some safe operating temperatures (not recommended temperatures) for junctions can be 150C. This is for the internal of the MOSFET. Since ceramic is an insulator, when we take a temperature probe and stick it on or next to the FET itself, our temperature will be lower than the FET actually is which means if we measure 150C on the outside, we're out of specification. If we use a datasheet on our specific FET we have, we can find the ratio between these two temperatures (called the Thermal resistance between junction and case). Assuming a ratio of 1.6 C/W (for every 1.6 watt of heat our FET produces, we can measure 1 outside) on average (power loss curve is exponential for FETs so only derivatives are really applicable here), we will on average see a lower temperatures outside. Very high thermal resistance is not good (above 4-6).
-:aa:
+
 If we resort to a SiC639 50A power stage (which is very common among B550 motherboards), let's estimate we push 30 amps through it normally. We have 4W of heat loss. Multiply that by our thermal resistance of 1.6, we're around 6.5 C higher on the inside of the MOSFET than what we can measure externally. 120C is still safe for our maximum operating temperature (still not optimal though) and with our 6.5 degree increase, because heat is dissipated, our PCB linearly decreases its current output (not good) and we're past what recommended temperatures are (even though we're still near 86% efficient).
 
 Even looking back at the power loss vs current output, our 50A rated power stage doesn't even have 50A labelled on the graph, it stops at 45A (continuously drains). While this is safe, the FET may be dead before its rated lifetime if we max out our temperature rating.
@@ -238,7 +238,7 @@ Gear-Down mode is a Reliability, Availability and Serviceability (aka RAS) featu
 3. MemTest (not x86) -- Open up a couple installations each with 2000 MBs allocated: https://hcidesign.com/memtest/
 
 ### [ Basic Things to Remember ]
-Every manufacturer that sells RAM wants you to be able to slot your RAM in, click the power button, and then it works. So the easiest way to do this is to set looser timings and really low frequency because this ensures stability and compatibility with the rest of your system. What XMP or DOCP does is it just takes that slow speed and then runs the kit at whatever the package you bought online says it was rated for (most of the time usually). For example, our RAM kit may run 2400cl15 out of the box, and when we enable XMP, it runs at 3200cl16.
+Every manufacturer that sells RAM wants you to be able to slot your RAM in, click the power button, and then it works. So the easiest way to do this is to set looser timings and really low frequency because this ensures stability and compatibility with the rest of your system. What XMP or DOCP does is it just takes that slow speed and then runs the kit at whatever the package you bought online says it was rated for (most of the time usually). For example, our RAM kit may run 2400c15 out of the box, and when we enable XMP, it runs at 3200c16.
 
 Manually overclocking is where you go into the BIOS and, by hand, enter individual voltages, frequencies, and timings to maximize the performance out of your RAM kit. This can take a lot of hours to tune the timings and voltages to stable levels and then stress testing the system--not recommended for beginners.
  
@@ -247,13 +247,13 @@ Manually overclocking is where you go into the BIOS and, by hand, enter individu
 2. Yes, little manual overclock, no XMP -> Rev. E /SR Rev. B / CJR / DJR / Cheap B-die
 3. People who want to overclock a lot and get the most performance -> B die.
 
-People sometimes overestimate the performance of RAM and the gains therefrom. You can either get slow or fast RAM (or even leave it at JEDEC values). Stick to a cheaper kit, and if you have the budget, the want, and time to manually overclock, then consider it. 3600cl16 Doesn't fit in here at all. Once we start overclocking, we care about the memory ICs used.
+People sometimes overestimate the performance of RAM and the gains therefrom. You can either get slow or fast RAM (or even leave it at JEDEC values). Stick to a cheaper kit, and if you have the budget, the want, and time to manually overclock, then consider it. 3600c16 Doesn't fit in here at all. Once we start overclocking, we care about the memory ICs used.
  
-You can put two different RAM kits together; however, depending on the specific model from the specific manufacturer, you can get varying chips--which can cause some problems stability wise. To ensure complete compatibility, you just have to know the specific dies, ranks, and PCB revisions which may be almost impossible. It is just easier to buy the same exact kit if you currently have another one or just get a larger kit that has more sticks rated to run together with each other.
+You can put two different RAM kits together; however, depending on the specific model from the specific manufacturer, you can get varying chips--which can cause some problems stability wise. To ensure complete compatibility, you just have to know the specific dies, ranks, and PCB revisions which may be almost impossible. It is just easier to buy the same exact kit if you currently have another one or just get a larger kit that has more sticks rated to run together with each other. Though this does not work for Corsair, since they use different versions within the same SKU. Examples and version numbers stated below.
  
-SK Hynix, Samsung, etc. couldn't care less about you as a consumer. They don't care what memory chip quality goes into a memory stick as long as it meets JEDEC. For overclocking, even a single bad chip out of eight can stop you in your tracks. This is why you should probably buy your RAM from Corsair, G.skill, etc. that do their own binning processes.
+SK Hynix, Samsung, etc. couldn't care less about you as a consumer. They don't care what memory chip quality goes into a memory stick as long as it meets JEDEC. For overclocking, even a single bad chip out of eight can stop you in your tracks. This is why you should probably buy your RAM from Corsair (Yes they do have some proper kits), G.skill, etc. that do their own binning processes.
  
-So when people ask about what brand of RAM is the most "reliable", I like to tell them this...None of them. At the 3000cl15, 3200cl16, 3600cl18 there can be a ton of different dies. From Nanya C to reject Samsung B, we can get everything. A lot of it is just what the "brand" had on the manufacturing floor that day (because brands like Corsair and G.skill don't actually make the DRAM wafers that actually make RAM what it is). Most of these (besides the Crucial Ballistix kits because Micron just likes to shove Rev.E in every 3000-3600 kit [or 4000 if 2x8]) dies are just set XMP and never-touch-it-again-type-of-thing. You don't know what you're going to get and most of them won't overclock well at all.
+So when people ask about what brand of RAM is the most "reliable", I like to tell them this...None of them. At the 3000c15, 3200c16, 3600c18 there can be a ton of different dies. From Nanya C to reject Samsung B, we can get everything. A lot of it is just what the "brand" had on the manufacturing floor that day (because brands like Corsair and G.skill don't actually make the DRAM wafers that actually make RAM what it is). Most of these (besides the Crucial Ballistix kits because Micron just likes to shove Rev.E in every 3000-3600 kit [or 4000 if 2x8]) dies are just set XMP and never-touch-it-again-type-of-thing. You don't know what you're going to get and most of them won't overclock well at all.
 
 Brands like Corsair, G.skill, etc. take the memory ICs they get from Samsung, change or completely redesign a PCB for their sticks like adding extra capacitors or SMT on the back or making room for a RGB circuit, so the layout varies from module to module. In fact, the dominators are custom PCBs that allow the heatspreader to screw directly into the PCB. Others just copy the JEDEC PCB, and with the dies they bought, slap it on memory sticks and bin them to those speed bins.
  
@@ -299,16 +299,16 @@ RAM Tierlist for Single Rank Dimms
 https://media.discordapp.net/attachments/788973277916692490/803468502358294538/unknown.png
 
 ### [ Notable 2x8 Kits ]
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3000cl15 -- You bought an B460 board...
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3200cl16 -- Cheap kit for overclocking your frequency a little bit
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3600cl16 -- Higher bin of the 3200cl16 variant, consider this if it is on sale
-Samsung B - Team T-Force DARK PRO 2x8GB @ 3466cl16 -- Cheap and non-reject kit of Samsung B-die (better than above kits)
-Samsung B - Team T-Force DARK PRO 2x8GB @ 3200cl14 -- Tightest bin at this frequency
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3000c15 -- You bought an B460 board...
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3200c16 -- Cheap kit for overclocking your frequency a little bit
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3600c16 -- Higher bin of the 3200c16 variant, consider this if it is on sale
+Samsung B - Team T-Force DARK PRO 2x8GB @ 3466c16 -- Cheap and non-reject kit of Samsung B-die (better than above kits)
+Samsung B - Team T-Force DARK PRO 2x8GB @ 3200c14 -- Tightest bin at this frequency
 ### [ Notable 2x16 Kits ]
 Low: https://pcpartpicker.com/product/BZwqqs/gskill-ripjaws-v-series-32-gb-2-x-16-gb-ddr4-3200-cl14-memory-f4-3200c14d-32gvk
 Higher: 
 RGB: https://pcpartpicker.com/product/Y9jNnQ/gskill-trident-z-rgb-32-gb-2-x-16-gb-ddr4-4000-cl17-memory-f4-4000c17d-32gtzrb
-Non-RGBhttps://www.newegg.com/g-skill-32gb-288-pin-ddr4-sdram/p/N82E168203740214
+Non-RGB https://www.newegg.com/g-skill-32gb-288-pin-ddr4-sdram/p/N82E168203740214
  
 the breakdown of DDR4 Nanya is as follows basically
 4Gb B that barely does 3100 and has a suspicious Micron-ish Z80B code in IBIS. EOL.
@@ -317,9 +317,11 @@ the breakdown of DDR4 Nanya is as follows basically
 8Gb C that exists but hasn't been confirmed so to speak in the wild
 4Gb D that exists and unless Thaiphoon now has trouble recognising memory manufacturers, does 3333
 and a great many partially marked units that are all over the place, with the most recent ones going pretty high and pretty tight (B-die-ish tRFC, almost flat primaries, scales up to 1.45V w/o any degradation info as of now)
+
 from prev in roc
+
 set of anecdotes and observations on nuderam from different vendors
-Kingston is somehow cursed
+Kingston is somehow cursed.
 Team (Elite) likes buying completely unbranded dies (you'll be OCing blindly) but at least the mfr is there in the SPD
 +- the same for Apacer
 Adata's been using Spectek TP (95%) every now and then, bruh
@@ -333,7 +335,6 @@ Goodram used to be meh, is fine now (well... however fine C-died can get, howeve
 Timetec is highly praised
 WARNING this doesn't necessarily apply to non-OEM RAM with fancy heatspreaders and a fancy XMP
  
-The tRAS rule is false, https://discord.com/channels/586604427063066624/757967245988331654/824228062366531615
 
 ## Identify your Corsair sticks:
 
@@ -386,39 +387,33 @@ The tRAS rule is false, https://discord.com/channels/586604427063066624/75796724
 ## PSUs 101
 
 
-### How Power Supplies Work for Noobs -- Provided by @Vitamoon 
+### How Power Supplies Work for Noobs
 The PSU takes AC 120/240V from the socket, electricity goes through one side of the PSU and comes out the other side, turns it into DC 12V. There's also 5V & 3.3V rails for other components, but those are not really important. The motherboard can then take 12V and uses its VRMs to turn it into DC ~1.2V (depends on what you set it to) for the CPU.
 
 120V 10A gets transformed into 12V 100A, then on the motherboard into 1.2V 1000A. (Current ratings are dependable. Remember, the PSU will only draw the power it needs).
 ⠀⠀
-### A Too Long Didn't Read on How to Pick a Power Supply-- Provided by @Mitja 
+### A Too Long Didn't Read on How to Pick a Power Supply
 
-If a manufacturer or brand didn't bother to even get an 80 Plus or ETA efficiency certification, it's not worth looking at. After that, there are very very few passable 80+ (white/no color) units so usually skip that too (MWE V2 is "acceptable" versus group regulated). Additionally, some manufacturers just slap a 80+ sticker on it without approval (or fake testing). At Bronze level it starts getting harder to discern what is and isn't a piece of crap. General baseline you want them to rate full or near full power on the 12V rail so a 650w power supply should be able to provide ~649w on the 12v rail and so on (generally means it's not group regulated). After that look for professional reviews/testing.
+If a manufacturer or brand didn't bother to even get an 80 Plus or ETA efficiency certification, it's not worth looking at for consumers. After that, there are very very few passable 80+ (white/no color) units so usually skip that too (MWE V2 is "acceptable" versus group regulated). Additionally, some manufacturers just slap a 80+ sticker on it without approval (or fake testing). At Bronze level it starts getting harder to discern what is and isn't a piece of crap. General baseline you want them to rate full or near full power on the 12V rail so a 650w power supply should be able to provide ~649w on the 12v rail and so on (generally means it's not group regulated). After that look for professional reviews/testing.
 ⠀⠀
 ### How to Learn about Power Supplies
-My first and greatest advice is to learn about electronics before even glossing into the channels below. Power supplies are very complicated, and there's not a lot of modern day circuit diagrams of the exact units you're buying that you could reverse-think about how it works. Resistors, shotky diodes, inductors, transformers, operational amplifiers, swtiching MOSFETs, capacitors, etc. can be all arranged in different ways or "topologies". Please read #electrical-engineering on some very simple things, and I highly suggesting taking a look at various physics sources before even diving into power supplies. Once you learn more in-depth about the units, you may realize that it's just the same thing over and over again, and the only fun comes when there is a weird unit that is made.
+My first and greatest advice is to learn about electronics before even glossing into the channels below. Power supplies are very complicated, and there's not a lot of modern day circuit diagrams of the exact units you're buying that you could reverse-think about how it works. Resistors, inductors, transformers, operational amplifiers, swtiching MOSFETs, capacitors, etc. can be all arranged in different ways or "topologies". Once you learn more in-depth about the units, you may realize that it's just the same thing over and over again, and the only fun comes when there is a weird unit that is made.
+
+### Note before reading this, if you want to read an explaination on PSUs by Aris, one of the most respectable and knowledgable guru's out there. Read this https://www.tomshardware.com/reviews/power-supplies-101,4193-14.html. Otherwise, have fun.
 
 ### [ What To Look for In a Power Supply Pt. 1 - Wattage ]
-First thing we are going to tackle is the easiest metric to look for in PSUs is wattage. It is what determines how much power it takes from the wall, converts it to DC, and then sends to the rest of the components. You definitely do not want to be right up against what it is continuously rated for. Sometimes you will trip OPP (over-power protection) and cause the power supply to shut down. If the PSU is not good quality, you can get far worse problems then just shutting down. 
+First thing we are going to tackle is the easiest metric to look for in PSUs is wattage. It is what determines how much power it takes from the wall, converts it to DC, and then sends to the rest of the components. You definitely do not want to be right up against what it is continuously rated for. Sometimes you will trip OPP (over-power protection) and cause the power supply to shut down. If the PSU is not good quality, you can get far worse problems than just shutting down. 
 
 Power supplies are rated in continuous operation (as they should be). Never get a power supply only rated in peak wattage (there are standards for what it means to continuously output power)--which means they can technically draw more power from the wall than what the box says--you want to get more wattage. And what happens if you upgrade to more power hungry parts down the road or want to overclock? Don't skimp out on wattage.
 
 So, you want more wattage than what you system actually needs bare-minimum, but how can I find how much I need? Some people point to the estimated wattage on PCPartPicker or some calculator on the internet. Don't do this. Firstly, the parts on PCPP are rated by their TDP (Thermal Design Power), which is not actually the rating of power consumption. While the number can be in a ballpark of what the component actually use, it is not tied to wattage at all.  Secondly, those calculators are just going to estimate based on a preset range of values, and a lot of them don't disclose where they get those numbers from. My recommendation on where to find what power supply wattage you need is to look up third-party reviewers [Igorlab, Gamernexus, Hardware Unboxed (Techspot), Tom's Hardware, Techpowerup, AnandTech] and see the power consumption of the CPU and GPU under max load, factor in overclocking power draw, the power for your storage devices, and then add a little more overhead to that number.
 ⠀
-So you know how many watts your power supply should be rated for minimum, but how much is too much and does that matter? And to answer that latter question, yes it does. Not only does it cost more for more wattage, it actually makes your system less efficient (though, not by much if you're not doubling the wattage). Looking at a power vs efficiency graph, we see that at very low load, the system is not that efficient and then rapidly scales up to near peak efficiency around 35-60% (It's a wide range) use and then slowly trails off as we increase the load. This is disregarding very specific models (like the Cooler Master MWE Bronze lineup) where the controller switches to a different modulation mode to boost efficiency that while it does boost efficiency at the higher loads, absolutely plummets your efficiency during idle or low loads. But, let's take a look at an example using the 80+ certification system: 
-
-The Antec High Current Gamer 750w is 89.5% efficient on a standard American outlet at 20% load. That means when the power supply needs to supply 150w of DC power (near idle, low load), it will need to draw 168w of DC power (or 84w of AC power). If we put some more load on the power supply, let's say 300w watts, the system will only draw 330w. That is 89.5% vs 91% efficiency. Yes, this is very hypothetical and doesn't matter to you, which leads me to my next comment.
-⠀
-Let's say your system would--at peak--draw 400W of DC power, but the PSU draws AC power. If you used a 550W PSU that had maximum efficiency of 88% then this 400W DC would be 200/0.88 W = 227W AC. If you used a 650W PSU that was 90% efficient at its peak but at 200W was only 83% efficient then it would draw 200/0.83 W = 240W which would be 13W more power. This means you use a bit more electricity, about 6% more at peak. The 450W would need to dissipate 25W of heat, while the 650W would need to dissipate 41W which is 52% more heat but if we consider the 650W's ideal output of 400W @ 90%, this would be 444W input and 44W of heat. This means the PSU is designed to handle the 41W or so very easily, but in this scenario a PSU that's 83% efficient at 2400W and 90% efficient at 650W ends up producing very similar amounts of heat.
-
-So what does this mean for me? Don't absurdly overshoot your power supply wattage because your system will actually become less efficient (not much of a difference, a couple bucks over the years). If you're already considering a below recommended by first-party wattage, then overshooting a little is a good idea. 
-
-This also may be a good idea if you plan on keeping your power supply for a really long time. For myself, one of the builds I have will pull maybe 350w max at a certain time, but I have a 750w unit. Reason is because I am going to keep that unit for more than a decade and go through a couple upgrade cycles on a single power supply. Let's move to efficiency and certification.
+So you know how many watts your power supply should be rated for minimum, but how much is too much and does that matter? And to answer that latter question, yes it does. Not only does it cost more for more wattage, it actually makes your system less efficient (though, not by much if you're not doubling the wattage). Looking at a power vs efficiency graph, we see that at very low load, the system is not that efficient and then rapidly scales up to near peak efficiency around 35-60% (It's a wide range) use and then slowly trails off as we increase the load. This is disregarding very specific models (like the Cooler Master MWE Bronze lineup) where the controller switches to a different modulation mode to boost efficiency that while it does boost efficiency at the higher loads, absolutely plummets your efficiency during idle or low loads. 
 
 ### [ What To Look for In a Power Supply Pt. 2 - Efficiency ]
 Let's get this out of the way first...POWER SUPPLY EFFICIENCY IS NOT "CAUSATED" TO QUALITY OF A PARTICULAR UNIT. Sorry for that. Many people are under the misguided belief that a gold efficiency rated unit is better than a bronze unit straight up; they couldn't be anything further than the truth. There are platinum rated units that are garbage, and there are bronze units that are really decent.
 
-Coincidentally though, you shouldn't be really looking to anything under 80+ (White) efficiency (refer back to the first message by @Mitja). Some may say that higher efficiency power supplies are usually better quality. In some regards, they can be right, but the more pressing trend is the swell of bad quality units out there. You can buy readily available Gold rated PSUs that have positive reviews on distributors sites that shouldn't be bought because of the glaring issues. It is safer to never assume anything based on efficiency, and just go by model. If it just so happens that you (or someone that helped you) find a good quality unit, and it is higher efficiency, awesome. Depending on your electric bill costs per month, you might ever say money over the long term. A higher efficiency unit may also be worthwhile if the cost per month is so high that you will gain money back over the long run, but like I said before, efficiency does not equate quality. We still have to look for a good quality unit.
+Coincidentally though, you shouldn't be really looking to anything under 80+ (White) efficiency. Some may say that higher efficiency power supplies are usually better quality. In some regards, they can be right, but the more pressing trend is the swell of bad quality units out there. You can buy readily available Gold rated PSUs that have positive reviews on distributors sites that shouldn't be bought because of the glaring issues. It is safer to never assume anything based on efficiency, and just go by model. If it just so happens that you (or someone that helped you) find a good quality unit, and it is higher efficiency, awesome. Depending on your electric bill costs per month, you might ever save money over the long term. A higher efficiency unit may also be worthwhile if the cost per month is so high that you will gain money back over the long run, but like I said before, efficiency does not equate quality. We still have to look for a good quality unit.
 
 ### [ What To Look for in a Power Supply Pt. 3 - Modularity ]
 Modularity in a power supply refers to how the connections or cables are or aren't secured to a power supply. Simply putting, we have three types of modularity: none, semi, and fully-modular. Like how efficiency wasn't that much relevant, modularity isn't either. There are good and bad modular power supplies. Modularity only refers the cables, not the quality. Here is an infographic on it if you prefer visuals: https://i.imgur.com/F5i8APH.png
@@ -484,7 +479,9 @@ https://www.tomshardware.com/reviews/power-supplies-101,4193-14.html
 https://www.techpowerup.com/articles/overclocking/psu/160/5
 https://www.anandtech.com/show/2450/3
 https://www.relaxedtech.com/reviews/seasonic/focus-plus-ssr-850px/1
-http://www.ti.com/lit/ml/slup129/slup129.pdf 
+http://www.ti.com/lit/ml/slup129/slup129.pdf
+https://linustechtips.com/main/topic/1122694-why-group-regulated-units-shouldnt-be-boughtsold-in-2019-and-on/
+https://linustechtips.com/topic/1158795-topologies-and-regulations-what-should-i-look-for/
 
 ### [ What to Look for in a Power Supply Pt. 7 - Rails ]
 Rails are just how the traces or wires connecting to different connectors. Most units have a single 12v main rail and an extra one for standby power plus the minor rails. I am going to put this bluntly....Unless you pair and overclock a CPU to the max and max out the power delivery on a single PCIe cable, multi-rail power supplies are no way inferior to single rail (and if you did, well then, just add some extra PCIe cables). You can read more about it here: http://www.jonnyguru.com/forums/showthread.php?3990-Single-vs-Multiple-12V-rails-The-splitting-of-the-12V-rail
@@ -529,3 +526,127 @@ Circruit Diagram of an actual ATX unit: https://youtu.be/nhhWyg8QKiI
 Why PSUs die: https://www.google.com/amp/s/www.tomshardware.com/amp/news/why-power-supplies-fail-psus,36712.html
 How Voltage Regulation Works: https://www.meanwelldirect.co.uk/glossary/what-is-load-regulation/
 ﻿
+## Fans by realcelicahours
+
+Basic terminology:
+
+Bearing - the component of the fan responsible for reducing friction of the rotor shaft and with that, the blades. this is more often than not the part of a fan that dies first.
+
+DBB - dual ball bearing. the most reliable fan bearing available, due to its usage of ball bearings to reduce friction of the rotor shaft, instead of relying on fluid as a means of stabilization which can leak or evaporate. has no issue with high start/stop cycles or temperature tolerance due to lubricant not being crucial to operation
+
+HDB - also known as Hydro (dynamic) bearing or Hydraulic bearing. my usage of this is a catch-all term for bearings inbetween sleeve and true FDB (patented design by Matsushita). depending on the fan, HDBs can vary highly in groove count, lubricant viscosity and sealing. generally very mediocre in reliability, and doesn't do well for high start/stop cycles. temperature tolerance isnt great due to fluid evaporation. Often times is cheap and only recommended for very low budgets, which rarely applies because there are $7 fans with DBB.
+
+FDB - the best fluid bearing that isn't magnetically stabilized. the original design is patented by Matsushita, and uses grooving on the inside of the bearing to allow fluid to circulate. quite reliable, but still not great for high start/stop cycles. temperature tolerance isnt great due to fluid evaporation.
+
+Twister - Enermax's in house bearing that uses magnetic stabilization alongside a fluid based bearing to improve bearing reliability. quite effective and they reach high MTTF for what they are (100K and 160K at 25 degrees Celcius for G1 and G2 respectively)
+
+MTTF - a rough estimate of fan lifespan by the manufacturer, measured at a given temperature (usually 25 degrees Celcius for fluid based bearings) and humidity. an L50 calculation, in that atleast 50% of bearings would survive the MTTF number in hours or more, and the remaining 50% would be dead.
+
+RPM Response - Rpm response just refers to the range of control you can get from a fan by the pwm duty cycle from 0-100% and then what rpm corresponds to a duty cycle percentage based on testing multiple samples and averaging them.
+Aka where one fan will start being controllable at 0% duty cycle like Uctba12p, other fans might start at 20-40% for their control depending on the fan.
+They might also have a sudden spike in rotational speed when you increase duty cycle meaning the response curve will be less linear.
+For rpm response you would basically ideally have a completely linear curve from 0% duty cycle to 100% with rpm increasing equally for each duty cycle interval.
+Funnily enough Uctba12p gets very close to this.
+From multiple samples of testing I observed that apart from a very slight spike at the lowest and highest end of the curve they are mostly entirely linear throughout the rest of the curve.
+They also control from 0% duty cycle onwards so you can get extremely precise control for the rpm range it has.
+
+A duty cycle or power cycle is the fraction of one period in which a signal or system is active. Duty cycle is commonly expressed as a percentage or a ratio. A period is the time it takes for a signal to complete an on-and-off cycle. 
+
+
+Recommendations, best options in a category marked with a star, bearing type noted  next to name
+=<15USD RGB
+
+*Gelid Stella (DBB)
+https://gelidstore.com/collections/thermal-solutions/products/stella
+notes: the best budget rgb fan available with the best bearing, 24 LED dual ring daisychained ARGB and decent performance. keep shipping costs and time in mind as they ship from HK.
+
+~50-60USD RGB 3 pack: 
+*Enermax SquA RGB (G1 Twister)
+notes: top tier noise normalized performance, full accessory set w/ button controller or mobo sync, standardized connectors 
+
+=<15USD non RGB fan: 
+*Arctic P12 PWM PST CO (DBB)
+notes: great bearing reliability with a 10 year warranty, PWM daisychainable, decent noise normalized performance and static pressure
+
+Arctic P14 PWM PST CO (DBB)
+notes: see P12 PWM PST CO
+
+*Aerocool Dead Silence 140mm Black (FDB)
+notes: one of the best low noise fans you can buy, 3pin so voltage control only yet it has great RPM response 
+
+Cougar Vortex (FDB)
+notes: marketed as an HDB but is actually a true FDB with decent performance
+
+*Enermax T.B. Silence Adv 120 (Twister G2) 
+https://www.ebay.com/itm/Enermax-T-B-SILENCE-ADV-120mm-Ultra-Silent-Design-Case-Fan-3-Pack-Open-Box/392941865051? 
+(open box unit, only real place to get it at a reasonable price in the US) 
+notes: great fan that beats SilentWings3 in noise to airflow
+
+Enermax T.B. Silence Adv 140 (Twister G2) https://www.ebay.com/itm/Enermax-T-B-SILENCE-ADV-140mm-Ultra-Silent-Design-Case-Fan-3-Pack/392805755229? notes: see T.B. Silence Adv 120
+UK:
+
+<15GBP RGB fan
+
+*Gelid Stella (DBB)
+https://gelidstore.com/collections/thermal-solutions/products/stella
+notes: the best budget rgb fan available with the best bearing, 24 LED dual ring daisychained ARGB and decent performance. keep shipping costs and time in mind as they ship from HK.
+
+50-60GBP RGB multipacks
+
+*Enermax SquA RGB (Twister G1)
+notes: top tier noise normalized performance, full accessory set w/ button controller or mobo sync, standardized connectors 
+
+Alpenföhn Wing Boost 3 High Speed Black/White
+(FDB)
+notes: worse noise normalized performance than squa, modest fan profile recommended due to high speed range
+
+Alpenföhn Wing Boost 3 Black/White (FDB)
+notes: worse noise normalized performance than squa, 600RPM max cutdown from High Speed, no modest fan profile needed for most people
+
+=<15GBP non RGB fan
+
+*Arctic P12 PWM PST CO (DBB)
+notes: great bearing reliability with a 10 year warranty, PWM daisychainable, decent noise normalized performance and static pressure
+
+Arctic P14 PWM PST CO (DBB)
+notes: see P12 PWM PST CO
+
+Arctic F12 PWM PST CO (DBB) 
+notes: worse noise normalized performance than P, still PWM daisychainable with great reliability
+
+Arctic F14 PWM PST CO (DBB)
+notes: see F12 PWM PST CO
+
+NoiseBlocker BlackSilentPro P-2 (NB-NanoSLI 2)
+notes: 3pin, so only voltage control, but good performance at low noise levels
+AU: (WIP)
+
+=<15AUD non RGB fan
+
+*Scythe Slip Stream 1200RPM DB (DBB)
+notes: beats anything else at the price point with amazing bearing reliability and top tier noise normalized performance, 3pin so only voltage control
+
+=<20AUD RGB fan
+
+*Gelid Stella (DBB)
+https://gelidstore.com/collections/thermal-solutions/products/stella
+notes: the best budget rgb fan available with the best bearing, 24 LED dual ring daisychainable ARGB and decent performance. keep shipping costs and time in mind as they ship from HK.
+
+Options to avoid
+
+"Cheap" RGB fans from brands such as Asiahorse and UpHere - RGB fans like this use low lifespan HDBs which leave alot to be desired in long term reliability and are far from the best in noise normalized performance or bearing reliability or LED count for the price when Gelid Stella exists
+
+Every Corsair RGB fan - Corsair's RGB fans are horribly priced and have mediocre at best performance. every fan besides ML120RGB has a 40K MTTF bearing, and ML120RGB exacerbates the pricing issue. they also use proprietary connectors which lock you into their rgb ecosystem with iCUE which
+is never a good thing
+
+Lian Li Uni Fan SL120 - the frame thickness on these fans impedes heavily on blade diameter leading to mediocre noise normalized performance at a price higher than SquA, which makes them a bad option
+
+Noctua fans, besides A12x25 in highly specific scenarios (infinite budget+radiator) - Noctua's fans are greatly overrated by the general public, horribly priced (yes, that includes Redux) and their in-house oil pressure bearing loses in reliability to DBB on fans like Arctic CO (which also has 4 years more warranty)
+
+In Win RGB fans - In Win's RGB fans have mediocre noise normalized performance but more importantly a sleeve bearing which is the lowest lifespan bearing with the lowest temperature tolerance due to lubricant evaporation
+
+Enermax T.B. RGB - T.B. RGB has worse noise to airflow than SquA by a noticeable margin, and uses proprietary connectors for the SKUs that aren't T.B. RGB A.D.
+
+Silent Wings 3 - SW3 is over twice the price of T.B. Silence Adv which performs better and has much better RPM response
+
+Cooler Master MF120R - of all the major brand name RGB fans, this one's probably the worst. it has awful noise normalized performance and at a given noise level it will displace roughly half the air of an LL120 which is already a bad fan.
