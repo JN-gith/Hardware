@@ -81,9 +81,6 @@ Each NAND Flash memory cell contains a Floating Gate Transistor, which is where 
 An SSD’s capacity is determined by how many bits it can store per cell, hence the terms Single Level Cell (SLC), Multi Level Cell (MLC), Triple level cell (TLC) and Quad level Cell (QLC)
 SLC has the least cell density, so operations like programming and erasing are less complex. For example, when a cell contains one bit, its bit state can only read as a 1 or 0.
 By introducing multiple bits per cell you create a larger margin for error.
-ViShill — 12/31/2020
-
-typical FG mos that traps electrons.
 
 Gate oxide breakdown is also one of the reasons Flash storage breaks down
 electrons get into the oxide, burrow themsleves there and form holes and then allow elctron passage and arcing of electricity the next time the gate is proided with power
