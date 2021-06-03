@@ -235,7 +235,8 @@ Gear-Down mode is a Reliability, Availability and Serviceability (aka RAS) featu
 3. MemTest (not x86) -- Open up a couple installations each with 2000 MBs allocated: https://hcidesign.com/memtest/
 
 ### [ Basic Things to Remember ]
-Every manufacturer that sells RAM wants you to be able to slot your RAM in, click the power button, and then it works. So the easiest way to do this is to set looser timings and really low frequency because this ensures stability and compatibility with the rest of your system. What XMP or DOCP does is it just takes that slow speed and then runs the kit at whatever the package you bought online says it was rated for (most of the time usually). For example, our RAM kit may run 2400c15 out of the box, and when we enable XMP, it runs at 3200c16.
+Every manufacturer that sells RAM wants you to be able to slot your RAM in, click the power button, and then it works. So the easiest way to do this is to set looser timings and really low frequency because this ensures stability and compatibility with the rest of your system. What XMP or DOCP does is it just takes that slow speed and then runs the kit at whatever the package you bought online says it was rated for (most of the time usually). For example, our RAM kit may run 2400c15 out of the box, and when we enable XMP, it runs at 3200c16. Though there is a technology called PnP (Plug-'N-Play) by Kingston, but it's not on grand scale for consumers at all.
+Usually only DDR4-3466 CL19-23-23 and DDR4-3200 CL18-21-21, which both are reasonably slower compared to DDR4-3200 16-18-18.
 
 Manually overclocking is where you go into the BIOS and, by hand, enter individual voltages, frequencies, and timings to maximize the performance out of your RAM kit. This can take a lot of hours to tune the timings and voltages to stable levels and then stress testing the system--not recommended for beginners.
  
