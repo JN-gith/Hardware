@@ -296,11 +296,18 @@ https://media.discordapp.net/attachments/788973277916692490/803468502358294538/u
 
 ### [ Notable 2x8 Kits ]
 Micron Rev.E - Crucial Ballistix 2x8GB @ 3000c15 -- You bought an B460 board...
+
 Micron Rev.E - Crucial Ballistix 2x8GB @ 3200c16 -- Cheap kit for overclocking your frequency a little bit -- around 4000MT/s with loose CL16/17
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3600c16 -- Higher bin of the 3200c16 variant, consider this if it is on sale or if you want a very decent XMP (3600MT/s 16-18-18-38)
+
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3600c16 -- Higher bin of the 3200c16 variant, consider this if it is on sale or if you want a very decent XMP (3600MT/s 
+16-18-18-38)
+
 Samsung B - Team T-Force DARK PRO 2x8GB @ 3466c16 -- Cheap and non-reject kit of Samsung B-die (better than above kits)
+
 Samsung B - Team T-Force DARK PRO 2x8GB @ 3200c14 -- Tightest bin at this frequency
+
 Samsung B - OLOy Blade RGB 2x8GB @ 3600c14 -- Very tight RGB bin, doesn't scale with voltage as well as dark pro but does reach 4000c14 at 1.58V on average
+
 ### [ Notable 2x16 Kits ]
 Low: https://pcpartpicker.com/product/BZwqqs/gskill-ripjaws-v-series-32-gb-2-x-16-gb-ddr4-3200-cl14-memory-f4-3200c14d-32gvk
 Higher: 
