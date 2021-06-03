@@ -5,10 +5,10 @@ Information about all parts of hardware
 Information about memory and storage
 
 ### Resources
-Great Arcticle on HMB in NVME Drives: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7051071/
-Game Loading Compared: https://www.techspot.com/review/2116-storage-speed-game-loading/
-Newmaxx SSD Sheet: https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0
-Real Life Span of SSDs Tested (6 years old): https://techreport.com/review/27909/the-ssd-endurance-experiment-theyre-all-dead/
+Great Arcticle on HMB in NVME Drives: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7051071/ <br/>
+Game Loading Compared: https://www.techspot.com/review/2116-storage-speed-game-loading/ <br/>
+Newmaxx SSD Sheet: https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0 <br/>
+Real Life Span of SSDs Tested (6 years old): https://techreport.com/review/27909/the-ssd-endurance-experiment-theyre-all-dead/ <br/>
 
  
 ### Hardware
@@ -93,9 +93,9 @@ An SSD’s capacity is determined by how many bits it can store per cell, hence 
 SLC has the least cell density, so operations like programming and erasing are less complex. For example, when a cell contains one bit, its bit state can only read as a 1 or 0.
 By introducing multiple bits per cell you create a larger margin for error.
 
-https://www.reddit.com/r/NewMaxx/comments/gcbaxi/ssd_resource_compilation/
-https://www.reddit.com/r/NewMaxx/comments/dhvrdm/ssd_guides_resources/
-https://ssd.borecraft.com/
+https://www.reddit.com/r/NewMaxx/comments/gcbaxi/ssd_resource_compilation/ <br/>
+https://www.reddit.com/r/NewMaxx/comments/dhvrdm/ssd_guides_resources/ <br/>
+https://ssd.borecraft.com/ <br/>
 
 
 ## Coolers
@@ -152,21 +152,21 @@ What most people need help on
 The notation is that you should use a checklist and search by the motherboards that fit your criteria and then ask for help on your unknowns. A lot of knowledge can be very granular and not easily accessible if you don't know what you'e looking for. All you need to know is most people don't need a ridiculously expensive motherboard to get the features they want. Remember, motherboards do not DIRECTLY impact performance! You shouldn't be compromising on the CPU choice in order to get a motherboard you won't take advantage of.
 
 ### [ General Resources ]
-MOTHERBOARD CULTIST (Z590 + TR4 + AM4): https://docs.google.com/spreadsheets/d/1OFGHnF4_LF_JBR8K2bjvzzgvRG0mIwwWDHl5A-4D8xQ/edit?usp=sharing
-LGA1200 VRMs: https://docs.google.com/spreadsheets/d/1yPS3hj_K7EPT4RBWCyjdKNP56pnwDz-IgBc0975-FUg/edit#gid=0
-B550 VRMs: https://docs.google.com/spreadsheets/d/1PuUWroxA0HvSSipsXlB8hnYkshxD8LdeO5EA6WLdOQw/edit#gid=0
-AM4 Vcore (Missing B550): https://docs.google.com/spreadsheets/d/1d9_E3h8bLp-TXr-0zTJFqqVxdCR9daIVNyMatydkpFA/edit#gid=611478281
-Geeking Out on Every Single Motherboard's VRMs: https://docs.google.com/spreadsheets/d/1Smj5dh97n32wJqm5dkdDcQt8ID7vH52-lKzaaXUUQx8/edit#gid=0
-Z490 Lineup: https://docs.google.com/spreadsheets/d/1TWJGQY8HaIF-iwfSeKLIFD9WNMsdyHkgGBa312gE5mE/edit#gid=0
-AM4 Lineup: https://docs.google.com/spreadsheets/d/1wmsTYK9Z3-jUX5LGRoFnsZYZiW1pfiDZnKCjaXyzd1o/edit#gid=2112472504
+MOTHERBOARD CULTIST (Z590 + TR4 + AM4): https://docs.google.com/spreadsheets/d/1OFGHnF4_LF_JBR8K2bjvzzgvRG0mIwwWDHl5A-4D8xQ/edit?usp=sharing <br/>
+LGA1200 VRMs: https://docs.google.com/spreadsheets/d/1yPS3hj_K7EPT4RBWCyjdKNP56pnwDz-IgBc0975-FUg/edit#gid=0 <br/>
+B550 VRMs: https://docs.google.com/spreadsheets/d/1PuUWroxA0HvSSipsXlB8hnYkshxD8LdeO5EA6WLdOQw/edit#gid=0 <br/>
+AM4 Vcore (Missing B550): https://docs.google.com/spreadsheets/d/1d9_E3h8bLp-TXr-0zTJFqqVxdCR9daIVNyMatydkpFA/edit#gid=611478281 <br/>
+Geeking Out on Every Single Motherboard's VRMs: https://docs.google.com/spreadsheets/d/1Smj5dh97n32wJqm5dkdDcQt8ID7vH52-lKzaaXUUQx8/edit#gid=0 <br/>
+Z490 Lineup: https://docs.google.com/spreadsheets/d/1TWJGQY8HaIF-iwfSeKLIFD9WNMsdyHkgGBa312gE5mE/edit#gid=0 <br/>
+AM4 Lineup: https://docs.google.com/spreadsheets/d/1wmsTYK9Z3-jUX5LGRoFnsZYZiW1pfiDZnKCjaXyzd1o/edit#gid=2112472504 <br/>
 
 
 ### [ Learning about Concepts ]
-Motherboard Memory Topology: https://youtu.be/3vQwGGbW1AE
-Motherboard Transient Response: https://youtu.be/ml02z3NsHfE
-Load Line Calibration (LLC): https://youtu.be/bUaP0r5-xhY
-VRM Doublers: https://youtu.be/tQjY9ni8uu4
-How VRMs actually work: https://youtu.be/oDRHV3qtSWc
+Motherboard Memory Topology: https://youtu.be/3vQwGGbW1AE <br/>
+Motherboard Transient Response: https://youtu.be/ml02z3NsHfE <br/>
+Load Line Calibration (LLC): https://youtu.be/bUaP0r5-xhY <br/>
+VRM Doublers: https://youtu.be/tQjY9ni8uu4 <br/>
+How VRMs actually work: https://youtu.be/oDRHV3qtSWc <br/>
 
 ### [ Specific Notes ]
 While I use HWU's videos on VRM temps to gauge how bad of a board I am looking at, there is a big asterisk next to it:
@@ -188,13 +188,13 @@ VRMs temperatures are hard to decipher if you don't know what you are looking fo
 
  
 
-https://www.youtube.com/watch?v=zDxFbAhu4Bo&&ab_channel=Steve%27sHardware
+https://www.youtube.com/watch?v=zDxFbAhu4Bo&&ab_channel=Steve%27sHardware <br/>
 
 
-https://www.youtube.com/watch?v=Viitg4Yoy2Y&t=3s&ab_channel=Steve%27sHardware
+https://www.youtube.com/watch?v=Viitg4Yoy2Y&t=3s&ab_channel=Steve%27sHardware <br/>
 
 
-https://www.youtube.com/watch?v=6Fl1iFtOLKU&t=7s&ab_channel=Steve%27sHardware
+https://www.youtube.com/watch?v=6Fl1iFtOLKU&t=7s&ab_channel=Steve%27sHardware <br/>
 
 
 Extremely outdated components and a few outdated concepts, plus a shitty mic, but this is an EXTREMELY good document for learning how VRMs work
@@ -216,10 +216,10 @@ Even though it's not in retail stores yet, I wanted to get the thread started fo
 
 ## RAM 101
 
-RAM Frequency or Speed: https://www.tomshardware.com/reviews/pc-memory-ram-frequency-timings,6328.html
-RAM on Ryzen 3000: https://www.tomshardware.com/reviews/amd-ryzen-3000-best-memory-timings,6310-2.html
-RAM OC on Zen Explained: https://www.reddit.com/r/overclocking/comments/ahs5a2/demystifying_memory_overclocking_on_ryzen_oc/
-What is Gear Down Mode (GDM)? https://www.linkedin.com/pulse/what-ddr4-memory-gear-down-mode-barbara-aichinger
+RAM Frequency or Speed: https://www.tomshardware.com/reviews/pc-memory-ram-frequency-timings,6328.html <br/>
+RAM on Ryzen 3000: https://www.tomshardware.com/reviews/amd-ryzen-3000-best-memory-timings,6310-2.html <br/>
+RAM OC on Zen Explained: https://www.reddit.com/r/overclocking/comments/ahs5a2/demystifying_memory_overclocking_on_ryzen_oc/ <br/>
+What is Gear Down Mode (GDM)? https://www.linkedin.com/pulse/what-ddr4-memory-gear-down-mode-barbara-aichinger <br/>
 TL;DR
 Gear-Down mode is a Reliability, Availability and Serviceability (aka RAS) feature more clearly documented in the new JEDEC DDR4 Rev B spec. Gear-down mode allows the DRAM Address/Command and Control bus to use every other rising clock of the DDR4 Memory bus clock.
 
@@ -257,24 +257,24 @@ Brands like Corsair, G.skill, etc. take the memory ICs they get from Samsung, ch
 
  
 ### [ Advanced Topics ]
-Motherboard Memory Topology and RAM Configuration Optimization: https://youtu.be/3vQwGGbW1AE
-XMP Performance Tested: https://www.youtube.com/watch?v=25NW8cHNrgA
-Memory Ranks Tested (properly): https://youtu.be/1ZbxMh5xUOg
-Response Video: https://youtu.be/M7fDNBaQ7og
-Dealing with Temperature: https://youtu.be/iCD0ih4qzHw
-Memory Channels and Ranks: https://youtu.be/tySToFdLV2g
-DDR4 PCBs: https://docs.google.com/spreadsheets/d/1O9oWdgE4-1Y09l3HozwCf46nqqUHRL-w9u57KU_KMnw/edit?usp=sharing
-PCBs by Buildzoid: https://youtu.be/ZJDXsoYKZaY
-BZ on FCLK on Ryzen 3000: https://youtu.be/nugwAOvijHQ
-BZ Pt2: https://youtu.be/10pYf9wqFFY
+Motherboard Memory Topology and RAM Configuration Optimization: https://youtu.be/3vQwGGbW1AE <br/>
+XMP Performance Tested: https://www.youtube.com/watch?v=25NW8cHNrgA <br/>
+Memory Ranks Tested (properly): https://youtu.be/1ZbxMh5xUOg <br/>
+Response Video: https://youtu.be/M7fDNBaQ7og <br/>
+Dealing with Temperature: https://youtu.be/iCD0ih4qzHw <br/>
+Memory Channels and Ranks: https://youtu.be/tySToFdLV2g <br/>
+DDR4 PCBs: https://docs.google.com/spreadsheets/d/1O9oWdgE4-1Y09l3HozwCf46nqqUHRL-w9u57KU_KMnw/edit?usp=sharing <br/>
+PCBs by Buildzoid: https://youtu.be/ZJDXsoYKZaY <br/>
+BZ on FCLK on Ryzen 3000: https://youtu.be/nugwAOvijHQ <br/>
+BZ Pt2: https://youtu.be/10pYf9wqFFY <br/>
 
 ### [ RAM Overclocking/Improvement Benefits ]
-GamerNexus simple (Frequency and tCL) testing: https://youtu.be/9IY_KlkQK1Q
-RAM on Zen+: https://www.computerbase.de/2019-03/amd-ryzen-cpu-ddr4-ram/2/
-3900X/5900X testing:< https://imgur.com/A7CYHrj%3E
-9900k Fortnite: https://images-ext-2.discordapp.net/external/gzHSFVD40LrZf1ZqK0RLMCh-PIIcs8DgfQ2fn2mdM50/%3Fwidth%3D1009%26height%3D670/https/media.discordapp.net/attachments/363379361681899523/790784054231957544/unknown.png
-Quick link to testing by KingFaris (Highly recommended as main source): https://kingfaris.co.uk/ram/7
-Different RAM speeds and timings tested across some games: https://docs.google.com/spreadsheets/d/1xTJUq4R3CeEooYdHsdTARmBaw-po8NGoRrbL333BQBc/edit?usp=sharing
+GamerNexus simple (Frequency and tCL) testing: https://youtu.be/9IY_KlkQK1Q <br/>
+RAM on Zen+: https://www.computerbase.de/2019-03/amd-ryzen-cpu-ddr4-ram/2/ <br/>
+3900X/5900X testing:< https://imgur.com/A7CYHrj%3E <br/>
+9900k Fortnite: https://images-ext-2.discordapp.net/external/gzHSFVD40LrZf1ZqK0RLMCh-PIIcs8DgfQ2fn2mdM50/%3Fwidth%3D1009%26height%3D670/https/media.discordapp.net/attachments/363379361681899523/790784054231957544/unknown.png <br/> 
+Quick link to testing by KingFaris (Highly recommended as main source): https://kingfaris.co.uk/ram/7 <br/>
+Different RAM speeds and timings tested across some games: https://docs.google.com/spreadsheets/d/1xTJUq4R3CeEooYdHsdTARmBaw-po8NGoRrbL333BQBc/edit?usp=sharing <br/>
 
 ### [ General Resources ]
 
@@ -295,24 +295,18 @@ RAM Tierlist for Single Rank Dimms
 https://media.discordapp.net/attachments/788973277916692490/803468502358294538/unknown.png
 
 ### [ Notable 2x8 Kits ]
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3000c15 -- You bought an B460 board...
-
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3200c16 -- Cheap kit for overclocking your frequency a little bit -- around 4000MT/s with loose CL16/17
-
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3000c15 -- You bought an B460 board... <br/>
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3200c16 -- Cheap kit for overclocking your frequency a little bit -- around 4000MT/s with loose CL16/17 <br/>
 Micron Rev.E - Crucial Ballistix 2x8GB @ 3600c16 -- Higher bin of the 3200c16 variant, consider this if it is on sale or if you want a very decent XMP (3600MT/s 
-16-18-18-38)
-
-Samsung B - Team T-Force DARK PRO 2x8GB @ 3466c16 -- Cheap and non-reject kit of Samsung B-die (better than above kits)
-
-Samsung B - Team T-Force DARK PRO 2x8GB @ 3200c14 -- Tightest bin at this frequency
-
-Samsung B - OLOy Blade RGB 2x8GB @ 3600c14 -- Very tight RGB bin, doesn't scale with voltage as well as dark pro but does reach 4000c14 at 1.58V on average
+16-18-18-38) <br/>
+Samsung B - Team T-Force DARK PRO 2x8GB @ 3466c16 -- Cheap and non-reject kit of Samsung B-die (better than above kits) <br/>
+Samsung B - Team T-Force DARK PRO 2x8GB @ 3200c14 -- Tightest bin at this frequency <br/>
+Samsung B - OLOy Blade RGB 2x8GB @ 3600c14 -- Very tight RGB bin, doesn't scale with voltage as well as dark pro but does reach 4000c14 at 1.58V on average <br/>
 
 ### [ Notable 2x16 Kits ]
-Low: https://pcpartpicker.com/product/BZwqqs/gskill-ripjaws-v-series-32-gb-2-x-16-gb-ddr4-3200-cl14-memory-f4-3200c14d-32gvk
-Higher: 
-RGB: https://pcpartpicker.com/product/Y9jNnQ/gskill-trident-z-rgb-32-gb-2-x-16-gb-ddr4-4000-cl17-memory-f4-4000c17d-32gtzrb
-Non-RGB https://www.newegg.com/g-skill-32gb-288-pin-ddr4-sdram/p/N82E168203740214
+Low: https://pcpartpicker.com/product/BZwqqs/gskill-ripjaws-v-series-32-gb-2-x-16-gb-ddr4-3200-cl14-memory-f4-3200c14d-32gvk <br/>
+RGB: https://pcpartpicker.com/product/Y9jNnQ/gskill-trident-z-rgb-32-gb-2-x-16-gb-ddr4-4000-cl17-memory-f4-4000c17d-32gtzrb <br/>
+Non-RGB https://www.newegg.com/g-skill-32gb-288-pin-ddr4-sdram/p/N82E168203740214 <br/>
  
 the breakdown of DDR4 Nanya is as follows basically <br/>
 4Gb B that barely does 3100 and has a suspicious Micron-ish Z80B code in IBIS. EOL. <br/>
