@@ -235,13 +235,13 @@ Gear-Down mode is a Reliability, Availability and Serviceability (aka RAS) featu
 3. MemTest (not x86) -- Open up a couple installations each with 2000 MBs allocated: https://hcidesign.com/memtest/
 
 ### [ Basic Things to Remember ]
-Every manufacturer that sells RAM wants you to be able to slot your RAM in, click the power button, and then it works. So the easiest way to do this is to set looser timings and really low frequency because this ensures stability and compatibility with the rest of your system. What XMP or DOCP does is it just takes that slow speed and then runs the kit at whatever the package you bought online says it was rated for (most of the time usually). For example, our RAM kit may run 2400c15 out of the box, and when we enable XMP, it runs at 3200c16. Though there is a technology called PnP (Plug-'N-Play) by Kingston, but it's not on grand scale for consumers at all.
+Every manufacturer that sells RAM wants you to be able to slot your RAM in, click the power button, and then it works. So the easiest way to do this is to set looser timings and really low frequency because this ensures stability and compatibility with the rest of your system, also known as JEDEC specification. What XMP or DOCP does is it just takes that slow speed and then runs the kit at whatever the package you bought online says it was rated for (most of the time usually). For example, our RAM kit may run 2400c15 out of the box, and when we enable XMP, it runs at 3200c16. Though there is a technology called PnP (Plug-'N-Play) by Kingston, but it's not on grand scale for consumers at all.
 Usually only DDR4-3466 CL19-23-23 and DDR4-3200 CL18-21-21, which both are reasonably slower compared to DDR4-3200 16-18-18.
 
 Manually overclocking is where you go into the BIOS and, by hand, enter individual voltages, frequencies, and timings to maximize the performance out of your RAM kit. This can take a lot of hours to tune the timings and voltages to stable levels and then stress testing the system--not recommended for beginners.
  
 ### There are three types of users that buy RAM:
-1. No manual overclock, yes XMP -> Regular 3000/3200C15/16 kits (SpecTek, MFR, AFR, etc. -- can be a host of different dies)
+1. No manual overclock, yes XMP -> Regular 3000/3200C15/16 kits (SpecTek, MFR, AFR, etc. -- can be a host of different dies, doesn't really matter in most cases)
 2. Yes, little manual overclock, no XMP -> Rev. E /SR Rev. B / CJR / DJR / Cheap B-die
 3. People who want to overclock a lot and get the most performance -> Properly binned B-die such as 3600 14-14-14-34 or even higher bins.
 
@@ -269,11 +269,13 @@ BZ on FCLK on Ryzen 3000: https://youtu.be/nugwAOvijHQ <br/>
 BZ Pt2: https://youtu.be/10pYf9wqFFY <br/>
 
 ### [ RAM Overclocking/Improvement Benefits ]
+Testing by KingFaris (Highly recommended as main source, since it shows full timings and methodology): https://kingfaris.co.uk/ram/7 <br/>
+Best DDR4 overclocking guide out there in my opinion: https://github.com/integralfx/MemTestHelper/blob/master/DDR4%20OC%20Guide.md <br/>
+
 GamerNexus simple (Frequency and tCL) testing: https://youtu.be/9IY_KlkQK1Q <br/>
 RAM on Zen+: https://www.computerbase.de/2019-03/amd-ryzen-cpu-ddr4-ram/2/ <br/>
 3900X/5900X testing:< https://imgur.com/A7CYHrj%3E <br/>
 9900k Fortnite: https://images-ext-2.discordapp.net/external/gzHSFVD40LrZf1ZqK0RLMCh-PIIcs8DgfQ2fn2mdM50/%3Fwidth%3D1009%26height%3D670/https/media.discordapp.net/attachments/363379361681899523/790784054231957544/unknown.png <br/> 
-Quick link to testing by KingFaris (Highly recommended as main source): https://kingfaris.co.uk/ram/7 <br/>
 Different RAM speeds and timings tested across some games: https://docs.google.com/spreadsheets/d/1xTJUq4R3CeEooYdHsdTARmBaw-po8NGoRrbL333BQBc/edit?usp=sharing <br/>
 
 ### [ General Resources ]
