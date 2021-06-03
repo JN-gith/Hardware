@@ -273,7 +273,7 @@ GamerNexus simple (Frequency and tCL) testing: https://youtu.be/9IY_KlkQK1Q
 RAM on Zen+: https://www.computerbase.de/2019-03/amd-ryzen-cpu-ddr4-ram/2/
 3900X/5900X testing:< https://imgur.com/A7CYHrj%3E
 9900k Fortnite: https://images-ext-2.discordapp.net/external/gzHSFVD40LrZf1ZqK0RLMCh-PIIcs8DgfQ2fn2mdM50/%3Fwidth%3D1009%26height%3D670/https/media.discordapp.net/attachments/363379361681899523/790784054231957544/unknown.png
-Quick link to testing by KingFaris: https://kingfaris.co.uk/ram/7
+Quick link to testing by KingFaris (Highly recommended as main source): https://kingfaris.co.uk/ram/7
 Different RAM speeds and timings tested across some games: https://docs.google.com/spreadsheets/d/1xTJUq4R3CeEooYdHsdTARmBaw-po8NGoRrbL333BQBc/edit?usp=sharing
 
 ### [ General Resources ]
@@ -314,13 +314,13 @@ Higher:
 RGB: https://pcpartpicker.com/product/Y9jNnQ/gskill-trident-z-rgb-32-gb-2-x-16-gb-ddr4-4000-cl17-memory-f4-4000c17d-32gtzrb
 Non-RGB https://www.newegg.com/g-skill-32gb-288-pin-ddr4-sdram/p/N82E168203740214
  
-the breakdown of DDR4 Nanya is as follows basically
-4Gb B that barely does 3100 and has a suspicious Micron-ish Z80B code in IBIS. EOL.
-8Gb A that is pretty old and not overly consistent but usually does 3200
-8Gb B clocks like medium bin S8B but worse performance in the real world.
-8Gb C that exists but hasn't been confirmed so to speak in the wild
-4Gb D that exists and unless Thaiphoon now has trouble recognising memory manufacturers, does 3333
-and a great many partially marked units that are all over the place, with the most recent ones going pretty high and pretty tight (B-die-ish tRFC, almost flat primaries, scales up to 1.45V w/o any degradation info as of now)
+the breakdown of DDR4 Nanya is as follows basically <br/>
+4Gb B that barely does 3100 and has a suspicious Micron-ish Z80B code in IBIS. EOL. <br/>
+8Gb A that is pretty old and not overly consistent but usually does 3200 <br/>
+8Gb B clocks like medium bin S8B but worse performance in the real world. <br/>
+8Gb C that exists but hasn't been confirmed so to speak in the wild <br/>
+4Gb D that exists and unless Thaiphoon now has trouble recognising memory manufacturers, does 3333 <br/>
+and a great many partially marked units that are all over the place, with the most recent ones going pretty high and pretty tight (B-die-ish tRFC, almost flat  primaries, scales up to 1.45V w/o any degradation info as of now)
 
 
 ## Identify your Corsair sticks:
