@@ -22,7 +22,7 @@ Controllers are basically specialized RISC devices - reduced instruction set, in
 Controller is short for "microcontroller" (which is synonymous with RISC) but they're actually ASICs because they had other contained functions like error correction (ECC), a DRAM controller (if there's DRAM on the drive), etc. You can get block diagrams of them if you're curious, just look for the PDF for SMI'S SM2262/EN for example. In short there is a bus between the controller and flash/NAND where commands and data are transferred, signaling in a "hertz" or cycle way as with other electronics.
 
 If you're asking about the difference in controllers, as in SM2258 vs. SM2262 for example, typically you have different core counts and clock speeds. More cores and higher clocks generally mean higher performance - in this case, the NVMe-based SM2262 has twice the cores of the SATA SM2258.
-susex — 12/11/2020
+
 Components of a controller-
 
 1. Host interface- The host interface of a controller is typically designed to one specific interface specification. There are several interfaces made for different system and design requirements.
@@ -49,18 +49,29 @@ Components of a controller-
 
 Memory is volatile when it loses its data or contents on power loss. In the context of SSDs volatile memory is utilized to temporarily cache the controller's firmware, store information from read-only memory for debugging, manage controller functions, temporarily store boot code, and store various metadata (data about data) for use with the FTL. Enterprise drives often have power loss protection but it is not often found in consumer drives.
 https://en.wikipedia.org/wiki/Static_random-access_memory
-To sum it up, SRAM uses latching circuitry to store each bit, it is volatile as well
-DRAM is a type of random-access semiconductor memory that stores each bit of data in a memory cell consisting of a tiny capacitor and a transistor, both typically based on MOS technology, SSD controllers will also  have access to DRAM which is several orders of magnitude faster to access than the flash. This DRAM is mostly used for storing metadata
-DRAM tends to be DDR3 or DDR4 currently, often with a low-power variant
-DRAM/SRAM reduces write amplification by deferring https://www.romexsoftware.com/en-us/primo-cache/terms-configuration.html
-Some NVMe controllers can also use system memory as an external DRAM cache using a method known as host memory buffer (HMB)--more info here https://www.anandtech.com/show/12819/the-toshiba-rc100-ssd-review/2
+To sum it up, SRAM uses latching circuitry to store each bit, it is volatile as well.
+DRAM is a type of random-access semiconductor memory that stores each bit of data in a memory cell consisting of a tiny capacitor and a transistor, both typically based on MOS technology, SSD controllers will also  have access to DRAM which is several orders of magnitude faster to access than the flash. This DRAM is mostly used for storing metadata.
+DRAM tends to be DDR3 or DDR4 currently, often with a low-power variant.
+DRAM/SRAM reduces write amplification by deferring. https://www.romexsoftware.com/en-us/primo-cache/terms-configuration.html
+Some NVMe controllers can also use system memory as an external DRAM cache using a method known as host memory buffer (HMB)
+
+DRAM-less SSDs are often relatively inexpensive (with a few exceptions) and are attractive to many people, largely because they are cheap, and come from a large/known company. Take crucial (bx500) and Kingston (A400) as examples.
+
+These SSDs do not have a DRAM cache beyond the minimum required by the controller itself and therefore save the index of files on NAND flash, which is slower. And can therefore often drop rapidly at their speed, making it feel a lot slower, at worst (in combination with a slow controller and slow/low quality NAND) almost equivalent to a modern CMR 7200rpm hdd. 
+
+This is mainly a problem with some 2.5'' SATA SSDs, as some DRAM-less NVMe SSDs use HMB as mentioned above, which uses part of the internal RAM as DRAM cache for the SSD. It is also possible that an SLC write cache is used, where the SSD instead of 3 bits/layer writes only 1 and then transfers it to a 3 bit system when not in use. Because of this, the writing will be (almost) as fast as a good DRAM Sata or sometimes even NVMe. Some good examples of this are SN550, Z330, MP33 and A60.
+
+The only reason to buy a DRAM-less  SSD should be to upgrade an older system for faster boot times, as secondary storage or in other tasks where the speed of a good SSD is not necessarily needed. Ideally not at all since low capacity NVME drives using HMB are often very cheap.
+
+--more info here https://www.anandtech.com/show/12819/the-toshiba-rc100-ssd-review/2
+
 Configuration Terms
 PrimoCache Help Documents - Terminology - Configuration Terms
 The Toshiba RC100 SSD Review: Tiny Drive In A Big Market
 
 The FTL with regard to DRAM will have two parts: the allocator, which focuses on addressing, and a separate collector for garbage collection at the block level. The amount of DRAM required is dependent on the type of workload with random operations requiring more metadata accesses/updates than sequential
 Elements that can be stored and tracked within a SSD's DRAM cache--http://borecraft.com/files/w9TGR4MYH3.png
-susex — 12/31/2020
+
 Nand Flash
 
 https://www.silicon-power.com/blog/index.php/guides/nand-flash-memory-technology-basics/
@@ -82,6 +93,11 @@ An SSD’s capacity is determined by how many bits it can store per cell, hence 
 SLC has the least cell density, so operations like programming and erasing are less complex. For example, when a cell contains one bit, its bit state can only read as a 1 or 0.
 By introducing multiple bits per cell you create a larger margin for error.
 
+https://www.reddit.com/r/NewMaxx/comments/gcbaxi/ssd_resource_compilation/
+https://www.reddit.com/r/NewMaxx/comments/dhvrdm/ssd_guides_resources/
+https://ssd.borecraft.com/
+
+
 ## Coolers
 
 One of the most important decisions when building your PC, is choosing the right cooler for your needs. Your cooler choice can and will also make a substantial difference in noise output/ Thermals. Buying a cooler that can handle your CPU is critical to avoiding throttling and achieving your system’s full potential. CPU Coolers fall into one of three primary categories: air, closed-loop or all-in one (AIO) coolers, or custom /open-loop cooling setups. Today we are going to be looking at which cooler you should be taking that fit's your needs and what to look for in a cooler.
@@ -100,36 +116,26 @@ For liquid cooling, amount of clearance under the cooler for the RAM slots is cr
 
 ### [ What To Look for In a Cooler Pt. 2 - "Should I go for a liquid cooling or Air cooling?" ]
 
-If price and ease of installation are your main factors then I suggest you should move onto looking for an Air Cooler. However, if you want a quieter cooler (may vary) or/and a jazzy looking cooler, then I suggest you head onto liquid cooling. Really, it's that simple. For relatively high overclocks I'd also recommend going with liquid, due to the way water transfers and absorbs heat compared to fins in a heatsink. You would be looking at 280mm AIO's for 6-8 cores, and 360mm/custom loop/chiller setup for 10+ cores. Note that there are CPU's with an enormous amount of cores that clock fairly high, even a very good AIO won't keep these cool. So do research in advance.
+If price and ease of installation are your main factors then I suggest you should move onto looking for an Air Cooler. However, if you want a quieter cooler (may vary) or/and a jazzy looking cooler, then I suggest you head onto liquid cooling. Really, it's that simple. For relatively high overclocks I'd also recommend going with liquid, due to the way water transfers and absorbs heat compared to fins in a heatsink. You would be looking at 240/280mm AIO's for 6-8 cores, and 360mm/custom loop/chiller setup for 10+ cores. Note that there are CPU's with an enormous amount of cores that clock fairly high, even a very good AIO won't keep these cool. So do research in advance.
 
-There are also expandable kits out there which allow you to expand your CLC to other components like a custom loop.
+There are also expandable kits out there which allow you to expand your CLC (Custom Loop Configuration) to other components like a custom loop.
 
-### [  What To Look for In a Cooler Pt. 3 -Budget ]  
+### [  What To Look for In a Cooler Pt. 3 - Budget ]  
 
-This is an important factor in deciding the right cooler for you. If you plan on spending less than $80 or so on a cooler then might as well forget the thought of liquid cooling. Air is the best option out there for you. If you plan on paying mid range prices, let's say $80+ then you can either look at a high end air cooler or you can go and buy yourself an AIO. Mid-range AIOs are plenty capable of keeping most processors within safe temperature ranges, including when overclocking. If you plan on going down the Custom Loop road and have a budget of of around the 100-200 mark then really, forget it. Custom Loops of high quality cost upwards of 500 bucks (prices may vary). Now that budget is out of the way let us move onto the next factor.
+This is an important factor in deciding the right cooler for you. If you plan on spending less than $80 or so on a cooler then might as well forget the thought of liquid cooling. Air is the best option out there for you. If you plan on paying mid range prices, let's say $80+ then you can either look at a high end air cooler or you can go and buy yourself an AIO. Mid-range AIOs are plenty capable of keeping most processors within safe temperature ranges, including when overclocking. If you plan on going down the Custom Loop road and have a budget of of around the 100-200 mark then really, forget it. Custom Loops of high quality cost upwards of 500 bucks (prices may vary). Now that budget is out of the way let's move onto the next factor.
 
-
+### [  What To Look for In a Cooler Pt. 4 - Heatsinks ]  
 A larger chunk of grooved/finned metal provides more area for the heat to distribute itself. Big being better, in this case - just make sure you choose something that makes sense for your system. Grabbing the heaviest heatsink out there won't matter if it doesn't fit in the case and puts too much strain on the CPU or motherboard. Just grabbing any massive aluminum heatsink is probably not for the best, of course, given the importance of heatpipes, surface smoothness, and copper's place in the world. Surface roughness is a measurement of the base plate's smoothness (measured in microinches) and overall ability to connect directly with the surface of the CPU. In a perfect world, there would be no thermalpaste and the copper base plates would come in direct, flush, perfectly smooth contact with the CPU. The reason we even need thermalpaste is because microscopic divets (what are divets) in the surface of the connecting materials create air pockets. Air gets trapped in these pockets at high temperatures, causing uneven thermal distribution and resulting in hotter core temps. A thermal interface, while significantly lower thermal conductivity than pure copper or aluminum, provides an air-tight sealant between the divets that allows heat to cleanly migrate from the CPU surface to the cooler base plate. Smoother is better. Thermalpaste's thermal conductivity will impact the temperature moderately, but not normally enough where it's justifiable to spend lots of money on thermal compound
 
-### Heatpipe Exposure and Wick / Capillary Design
-
- There are two prevailing chamber designs in the CPU heatsink market: Vapor chambers and traditional capillary heatpipes. We'll cover the latter first due to their dominance. As this image shows so well, a heatpipe contains a very small amount of coolant or liquid (normally a mix of ammonium and ethanol or distilled water) which undergoes chemical phase changes - this is the catalyst for our reduced temperatures. The evaporator (CPU surface region) evaporates the liquid, where it travels in gaseous form toward the condensor. The condensor then—you guessed it—condenses the gas back to liquid form, where it travels down grooved, sintered, metal mesh, or composite tubing as a result of capillary action.
-
-The grooved wick design looks precisely like you'd think -- it's grooved cleanly down the interior of the tube, meanwhile the sintered design carries a more foamy and porous look.
-
-### Fan Positioning & Noise Reduction 
-
-Fans generate noise within a CPU cooler for a few primary reasons: Bearing type, fan size and RPM, and rattling within the cage. Of these, only rattling is unique to CPU coolers 
-
-Rattling is normally a result of poor fan positioning and design. The Tuniq Tower 120 Extreme cooler we reviewed had rubberized screws to prevent rattling, Zalman uses a centralized fan that is detached from the fins (theoretically the quietest design), and other coolers use a mix of brackets and mounting mechanisms that may or may not vibrate under load.
 
 ## Motherboards 101
 
 ### How To Pick A Motherboard 
 There are three steps to pick a motherboard
-1. Remove all the garbage motherboards. This includes Biostar, motherboards not compatible (socket wise), motherboards that will melt with your CPU in it, and motherboards with no rear IO.
+1. Remove all the garbage motherboards. This includes Biostar, motherboards not compatible (socket wise), motherboards that will melt with your CPU in it, and motherboards with no rear IO (Laptop tier).
 2. Go down the below checklist laid out below and determine what features you need
 3. Sort by price, and pick a motherboard
+
 [ What you can figure out ]
 
 - Rear IO (USB plus other ports) selection
@@ -214,7 +220,7 @@ RAM Frequency or Speed: https://www.tomshardware.com/reviews/pc-memory-ram-frequ
 RAM on Ryzen 3000: https://www.tomshardware.com/reviews/amd-ryzen-3000-best-memory-timings,6310-2.html
 RAM OC on Zen Explained: https://www.reddit.com/r/overclocking/comments/ahs5a2/demystifying_memory_overclocking_on_ryzen_oc/
 What is Gear Down Mode (GDM)? https://www.linkedin.com/pulse/what-ddr4-memory-gear-down-mode-barbara-aichinger
-What is DDR4 Memory Gear-Down Mode?
+TL;DR
 Gear-Down mode is a Reliability, Availability and Serviceability (aka RAS) feature more clearly documented in the new JEDEC DDR4 Rev B spec. Gear-down mode allows the DRAM Address/Command and Control bus to use every other rising clock of the DDR4 Memory bus clock.
 
 ### [ Resources for Monitoring and Stress Testing Memory ]
@@ -236,20 +242,18 @@ Manually overclocking is where you go into the BIOS and, by hand, enter individu
 ### There are three types of users that buy RAM:
 1. No manual overclock, yes XMP -> Regular 3000/3200C15/16 kits (SpecTek, MFR, AFR, etc. -- can be a host of different dies)
 2. Yes, little manual overclock, no XMP -> Rev. E /SR Rev. B / CJR / DJR / Cheap B-die
-3. People who want to overclock a lot and get the most performance -> B die.
+3. People who want to overclock a lot and get the most performance -> Properly binned B-die such as 3600 14-14-14-34 or even higher bins.
 
 People sometimes overestimate the performance of RAM and the gains therefrom. You can either get slow or fast RAM (or even leave it at JEDEC values). Stick to a cheaper kit, and if you have the budget, the want, and time to manually overclock, then consider it. 3600c16 Doesn't fit in here at all. Once we start overclocking, we care about the memory ICs used.
  
-You can put two different RAM kits together; however, depending on the specific model from the specific manufacturer, you can get varying chips--which can cause some problems stability wise. To ensure complete compatibility, you just have to know the specific dies, ranks, and PCB revisions which may be almost impossible. It is just easier to buy the same exact kit if you currently have another one or just get a larger kit that has more sticks rated to run together with each other. Though this does not work for Corsair, since they use different versions within the same SKU. Examples and version numbers stated below.
+You can put two different RAM kits together; however, depending on the specific model from the specific manufacturer, you can get varying chips--which can cause some problems stability wise. To ensure complete compatibility, you just have to know the specific dies, ranks, and PCB revisions which may be almost impossible. It is just easier to buy the same exact kit if you currently have another one or just get a larger kit that has more sticks rated to run together with each other. Though this does not work for Corsair and G.skill, since they use different versions within the same SKU (Moostly 3200 MT/s CL16 and 3600MT/s CL18 kits). Examples and version numbers stated below.
  
 SK Hynix, Samsung, etc. couldn't care less about you as a consumer. They don't care what memory chip quality goes into a memory stick as long as it meets JEDEC. For overclocking, even a single bad chip out of eight can stop you in your tracks. This is why you should probably buy your RAM from Corsair (Yes they do have some proper kits), G.skill, etc. that do their own binning processes.
  
-So when people ask about what brand of RAM is the most "reliable", I like to tell them this...None of them. At the 3000c15, 3200c16, 3600c18 there can be a ton of different dies. From Nanya C to reject Samsung B, we can get everything. A lot of it is just what the "brand" had on the manufacturing floor that day (because brands like Corsair and G.skill don't actually make the DRAM wafers that actually make RAM what it is). Most of these (besides the Crucial Ballistix kits because Micron just likes to shove Rev.E in every 3000-3600 kit [or 4000 if 2x8]) dies are just set XMP and never-touch-it-again-type-of-thing. You don't know what you're going to get and most of them won't overclock well at all.
+So when people ask about what brand of RAM is the most "reliable", I like to tell them this...None of them. At the 3000c15, 3200c16, 3600c18 there can be a ton of different dies. From Nanya C to reject Samsung B, we can get everything. A lot of it is just what the "brand" had on the manufacturing floor that day (because brands like Corsair and G.skill don't actually make the DRAM that actually make RAM what it is). Most of these (besides the Crucial Ballistix kits because Micron just likes to shove Rev.E in every 3000-3600 kit [or 4000 if 2x8]) dies are just set XMP and never-touch-it-again-type-of-thing. You don't know what you're going to get and most of them won't overclock well at all.
 
-Brands like Corsair, G.skill, etc. take the memory ICs they get from Samsung, change or completely redesign a PCB for their sticks like adding extra capacitors or SMT on the back or making room for a RGB circuit, so the layout varies from module to module. In fact, the dominators are custom PCBs that allow the heatspreader to screw directly into the PCB. Others just copy the JEDEC PCB, and with the dies they bought, slap it on memory sticks and bin them to those speed bins.
- 
-- Surface mount memory dimms (SMD dimms for some reason) reduce the parasitics
-- tREFI controls the maximum time betweem DRAM bank refreshes. It's how the RAM stores info before being touched again by the CPU
+Brands like Corsair, G.skill, etc. take the memory ICs they get from Samsung, change or completely redesign a PCB for their sticks like adding extra capacitors or SMT (Surface-mount technology) on the back or making room for a RGB circuit, so the layout varies from module to module. In fact, the dominators are custom PCBs that allow the heatspreader to screw directly into the PCB. Others just copy the JEDEC PCB, and with the dies they bought, slap it on memory sticks and bin them to those speed bins.
+
  
 ### [ Advanced Topics ]
 Motherboard Memory Topology and RAM Configuration Optimization: https://youtu.be/3vQwGGbW1AE
@@ -279,10 +283,10 @@ B-Die XMP Predictions: https://docs.google.com/spreadsheets/d/1Xz_rQgNFQF3Dm0yHJ
 
 ### [ Notes about Certain Kits ]
 
-- Samsung C-die scales negatively past 1.35v
+- Samsung C-die scales negatively past 1.35v, and sometimes even degrades the silicon
 - Crucial does not use any Hynix memory ICs
-- 8Rev.B tRAS is very loose. tRCDRD must be loose to overclock too -- doesn't scale with voltage on majority of timings
-- 8Rev.E tRCD is still loose. tRFC is loose too
+- 8Gbit Rev.B tRAS is very loose. tRCDRD must be loose to overclock too -- doesn't scale with voltage on majority of timings
+- 8Gbit Rev.E tRCD is still loose. tRFC is loose too
 - S8B can do very very low tRCD and tRFC
 
 
@@ -291,10 +295,11 @@ https://media.discordapp.net/attachments/788973277916692490/803468502358294538/u
 
 ### [ Notable 2x8 Kits ]
 Micron Rev.E - Crucial Ballistix 2x8GB @ 3000c15 -- You bought an B460 board...
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3200c16 -- Cheap kit for overclocking your frequency a little bit
-Micron Rev.E - Crucial Ballistix 2x8GB @ 3600c16 -- Higher bin of the 3200c16 variant, consider this if it is on sale
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3200c16 -- Cheap kit for overclocking your frequency a little bit -- around 4000MT/s with loose CL16/17
+Micron Rev.E - Crucial Ballistix 2x8GB @ 3600c16 -- Higher bin of the 3200c16 variant, consider this if it is on sale or if you want a very decent XMP (3600MT/s 16-18-18-38)
 Samsung B - Team T-Force DARK PRO 2x8GB @ 3466c16 -- Cheap and non-reject kit of Samsung B-die (better than above kits)
 Samsung B - Team T-Force DARK PRO 2x8GB @ 3200c14 -- Tightest bin at this frequency
+Samsung B - OLOy Blade RGB 2x8GB @ 3600c14 -- Very tight RGB bin, doesn't scale with voltage as well as dark pro but does reach 4000c14 at 1.58V on average
 ### [ Notable 2x16 Kits ]
 Low: https://pcpartpicker.com/product/BZwqqs/gskill-ripjaws-v-series-32-gb-2-x-16-gb-ddr4-3200-cl14-memory-f4-3200c14d-32gvk
 Higher: 
@@ -309,23 +314,6 @@ the breakdown of DDR4 Nanya is as follows basically
 4Gb D that exists and unless Thaiphoon now has trouble recognising memory manufacturers, does 3333
 and a great many partially marked units that are all over the place, with the most recent ones going pretty high and pretty tight (B-die-ish tRFC, almost flat primaries, scales up to 1.45V w/o any degradation info as of now)
 
-from prev in roc
-
-set of anecdotes and observations on nuderam from different vendors
-Kingston is somehow cursed.
-Team (Elite) likes buying completely unbranded dies (you'll be OCing blindly) but at least the mfr is there in the SPD
-+- the same for Apacer
-Adata's been using Spectek TP (95%) every now and then, bruh
-Patriot even had DG (75%?) at one point
-Transcend seems fine, all Spectek is 100%, OCs fine
-Corsair, G.skill... clueless
-Crucial is a wheel of fortune but all current entries are decent to awesome
-orig Micron, Samsung, Hynix and Nanya if you find some have the benefit of no lottery bins under the same SKU, duh :loldoge: 
-local phenomena:
-Goodram used to be meh, is fine now (well... however fine C-died can get, however fine poopy CJR bins can get, and however good Nanya eTT can get)
-Timetec is highly praised
-WARNING this doesn't necessarily apply to non-OEM RAM with fancy heatspreaders and a fancy XMP
- 
 
 ## Identify your Corsair sticks:
 
@@ -379,7 +367,7 @@ WARNING this doesn't necessarily apply to non-OEM RAM with fancy heatspreaders a
 
 
 ### How Power Supplies Work for Noobs
-The PSU takes AC 120/240V from the socket, electricity goes through one side of the PSU and comes out the other side, turns it into DC 12V. There's also 5V & 3.3V rails for other components, but those are not really important. The motherboard can then take 12V and uses its VRMs to turn it into DC ~1.2V (depends on what you set it to) for the CPU.
+The PSU takes AC 120~240V from the socket, electricity goes through one side of the PSU and comes out the other side, turns it into 12VDC. There's also 5V & 3.3V rails for other components, but those are not really important. The motherboard can then take 12V and uses its VRMs to turn it into DC ~1.1-1.375V (depends on what you set it to, these are common safe voltages) for the CPU.
 
 120V 10A gets transformed into 12V 100A, then on the motherboard into 1.2V 1000A. (Current ratings are dependable. Remember, the PSU will only draw the power it needs).
 ⠀⠀
@@ -388,7 +376,7 @@ The PSU takes AC 120/240V from the socket, electricity goes through one side of 
 If a manufacturer or brand didn't bother to even get an 80 Plus or ETA efficiency certification, it's not worth looking at for consumers. After that, there are very very few passable 80+ (white/no color) units so usually skip that too (MWE V2 is "acceptable" versus group regulated). Additionally, some manufacturers just slap a 80+ sticker on it without approval (or fake testing). At Bronze level it starts getting harder to discern what is and isn't a piece of crap. General baseline you want them to rate full or near full power on the 12V rail so a 650w power supply should be able to provide ~649w on the 12v rail and so on (generally means it's not group regulated). After that look for professional reviews/testing.
 ⠀⠀
 ### How to Learn about Power Supplies
-My first and greatest advice is to learn about electronics before even glossing into the channels below. Power supplies are very complicated, and there's not a lot of modern day circuit diagrams of the exact units you're buying that you could reverse-think about how it works. Resistors, inductors, transformers, operational amplifiers, swtiching MOSFETs, capacitors, etc. can be all arranged in different ways or "topologies". Once you learn more in-depth about the units, you may realize that it's just the same thing over and over again, and the only fun comes when there is a weird unit that is made.
+Power supplies are very complicated, and there's not a lot of modern day circuit diagrams of the exact units you're buying that you could reverse-think about how it works. Resistors, inductors, transformers, operational amplifiers, swtiching MOSFETs, capacitors, etc. can be all arranged in different ways or "topologies". Once you learn more in-depth about the units, you may realize that it's just the same thing over and over again, and the only fun comes when there is a weird unit that is made. (Yes Sohoo, I'm talking about you) 
 
 ### Note before reading this, if you want to read an explaination on PSUs by Aris, one of the most respectable and knowledgable guru's out there. Read this https://www.tomshardware.com/reviews/power-supplies-101,4193-14.html. Otherwise, have fun.
 
