@@ -48,11 +48,11 @@ Components of a controller-
 ### Volatile memory (SRAM/DRAM)
 
 Memory is volatile when it loses its data or contents on power loss. In the context of SSDs volatile memory is utilized to temporarily cache the controller's firmware, store information from read-only memory for debugging, manage controller functions, temporarily store boot code, and store various metadata (data about data) for use with the FTL. Enterprise drives often have power loss protection but it is not often found in consumer drives.
-https://en.wikipedia.org/wiki/Static_random-access_memory
+https://en.wikipedia.org/wiki/Static_random-access_memory <br/>
 To sum it up, SRAM uses latching circuitry to store each bit, it is volatile as well.
 DRAM is a type of random-access semiconductor memory that stores each bit of data in a memory cell consisting of a tiny capacitor and a transistor, both typically based on MOS technology, SSD controllers will also  have access to DRAM which is several orders of magnitude faster to access than the flash. This DRAM is mostly used for storing metadata.
 DRAM tends to be DDR3 or DDR4 currently, often with a low-power variant.
-DRAM/SRAM reduces write amplification by deferring. https://www.romexsoftware.com/en-us/primo-cache/terms-configuration.html
+DRAM/SRAM reduces write amplification by deferring. https://www.romexsoftware.com/en-us/primo-cache/terms-configuration.html <br/>
 Some NVMe controllers can also use system memory as an external DRAM cache using a method known as host memory buffer (HMB)
 
 DRAM-less SSDs are often relatively inexpensive (with a few exceptions) and are attractive to many people, largely because they are cheap, and come from a large/known company. Take crucial (bx500) and Kingston (A400) as examples.
