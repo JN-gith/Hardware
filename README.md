@@ -74,16 +74,16 @@ Elements that can be stored and tracked within a SSD's DRAM cache--http://borecr
 
 Nand Flash
 
-https://www.silicon-power.com/blog/index.php/guides/nand-flash-memory-technology-basics/
+https://www.silicon-power.com/blog/index.php/guides/nand-flash-memory-technology-basics/ <br/>
 TL;DR- 
 
-Flash memory is a non-volatile solid-state storage medium that relies on electric circuits to store and retrieve your data.
+Flash memory is a non-volatile solid-state storage medium that relies on electric circuits to store and retrieve your data. <br/>
 https://www.silicon-power.com/blog/wp-content/uploads/2018/04/NAND-Flash-Chip-Layout-2.jpg
 
 
-NOR Flash vs. NAND Flash-
-https://www.silicon-power.com/blog/wp-content/uploads/2018/03/NOR-Flash-Memory-Grid-1024x819.png
-https://www.silicon-power.com/blog/wp-content/uploads/2018/03/NAND-Flash-Memory-Grid-1024x819.png
+NOR Flash vs. NAND Flash- <br/>
+https://www.silicon-power.com/blog/wp-content/uploads/2018/03/NOR-Flash-Memory-Grid-1024x819.png <br/>
+https://www.silicon-power.com/blog/wp-content/uploads/2018/03/NAND-Flash-Memory-Grid-1024x819.png <br/>
 
 
 In NOR flash, each cell requires a word line connector and bit line connector. NAND Flash links an entire cell column by running the bit line through each cell.
