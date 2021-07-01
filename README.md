@@ -1,10 +1,11 @@
 # Hardware
 Information about all parts of hardware
-  1. [SSDs](#SSDs)
+  1. [SSD](#SSDs)
   2. [Coolers](#Coolers)
-  3. [B550 vs X570 Reality](#b550-vs-x570-reality)
-  4. [Futureproofing](#futureproofing)
-  5. [Conclusion](#conclusion)
+  3. [Motherboards](#Motherboards 101)
+  4. [RAM](#RAM 101)
+  5. [PSU](#PSUs 101)
+  6. [Fans](#Fans by realcelicahours)
 
 
 ## SSDs
@@ -440,15 +441,6 @@ The fact that the general public has been misguided for so long shouldn't be put
 
 5.  it will confuse everyone
 I don't think it will confuse people any further than they are already, with even manufacturers doing it wrong. Windows still showing RAM speeds like in the SDR era, and CPU-Z/HWINFO64 showing the correct units. There is a point at which you have to turn around and say, hey we've been saying this wrong it needs to be said right from now on.
-
-
-
-
-
-
-
-
-
 
 ## PSUs 101
 
