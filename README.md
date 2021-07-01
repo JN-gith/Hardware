@@ -430,7 +430,6 @@ transfers per second is a theoretical maximum if you did a transfer on every ris
 Probably out of all the arguments this is probably the one that i would most agree with but technically i still disagree with it, because from a technical point of view the use of MHz is often times wrong, and DDR is not accounted.
 And this is because if it was just simple english, yeah sure the nature of words changes. A lot of people may say words are about communicating. But the point is that's for descriptive words, what we're talking about here is an engineering term and engineering is very specific. if you get your engineering wrong, if you use the wrong units. Thing won't end well, both for your study/job, and the project you're working on. now the point is that if everyone understands it therefore it's more
 accessible. While it is OUR job, as the enthusiast tech community. To use the correct units and terms, so people don't get them mixed up.
-
 The fact that the general public has been misguided for so long shouldn't be put on them. It should be put on the people who are communicating the science and the numbers that. So for example youtubers, tech enthusiasts in discords and even the marketing team of RAM manufacturers.
 
 5.  it will confuse everyone
