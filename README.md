@@ -399,7 +399,8 @@ and a great many partially marked units that are all over the place, with the mo
 ### The correct way of referring to DDR4 memory specifications:
 
 I'm going to actually talk you through, what the argument is all about. So let's take this kit of DDR4-3600 memory from Crucial as an example. It's listed as DDR4-3600 and this is what you'll see when you buy this memory everywhere online.
-You know it says DDR4-3200/3600/3800 but how memory actually works relies on its clock cycle. So a clock cycle is a standard square wave that goes up down up down up down. ![afbeelding](https://user-images.githubusercontent.com/76516169/124125664-2ebdfb80-da7a-11eb-8238-97e863df93cf.png)
+You know it says DDR4-3200/3600/3800 but how memory actually works relies on its clock cycle. So a clock cycle is a standard square wave that goes up down up down up down. ![afbeelding](https://user-images.githubusercontent.com/76516169/124127260-cc65fa80-da7b-11eb-8560-f20b7894d7bf.png)
+
 
 Which for example for this kit, runs at 1800MHz, but the point is when you open your cpu z tab you see 1800MHz, and not 3200MHz. That is the data rate of the signal from your cpu to your memory and the reason why we get 3600 from 1800 is that a transfer can occur on either the rise of your clock signal or the fall of your clock signal. (rising and falling or also commonly used, "leading and trailing").
 
