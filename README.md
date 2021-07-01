@@ -190,9 +190,7 @@ If we resort to a SiC639 50A power stage (which is very common among B550 mother
 
 Even looking back at the power loss vs current output, our 50A rated power stage doesn't even have 50A labelled on the graph, it stops at 45A (continuously drains). While this is safe, the FET may be dead before its rated lifetime if we max out our temperature rating.
 
-### X570 vs B550 and why you probably shouldn't be buying a X570 motherboard for your Ryzen 5000 processor
-
-### Conclusion
+## Conclusion
 VRMs temperatures are hard to decipher if you don't know what you are looking for. Blindly stating VRMs are absolutely irrelevant loses all credibility in that person's statement. My suggestion is to get a motherboard that won't thermal throttle your processor or easily degrade, and after that, it doesn't matter if you're not overclocking. If you are, then we start looking at configurations, amperage ratings, input/output filters, and heatsinks.
 
 ### X570 vs B550 and why you probably shouldn't be buying a X570 motherboard for your Ryzen 5000 processor
