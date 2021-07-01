@@ -482,11 +482,10 @@ And this is because if it was just simple english, yeah sure the nature of words
 accessible. While it is OUR job, as the enthusiast tech community. To use the correct units and terms, so people don't get them mixed up.
 The fact that the general public has been misguided for so long shouldn't be put on them. It should be put on the people who are communicating the science and the numbers that. So for example youtubers, tech enthusiasts in discords and even the marketing team of RAM manufacturers.
 
-5. it will confuse everyone <br/>
-I don't think it will confuse people any further than they are already, with even manufacturers doing it wrong. Windows still showing RAM speeds like in the SDR era, and CPU-Z/HWINFO64 showing the correct units. There is a point at which you have to turn around and say, hey we've been saying this wrong it needs to be said right from now on.
+5. It will confuse everyone <br/>
+I don't think it will confuse people any further than they already are, with even manufacturers doing it wrong. Windows still showing RAM speeds like in the SDR era, and CPU-Z/HWINFO64 showing the correct units. There is a point at which you have to turn around and say, hey we've been saying this wrong, it needs to be said right from now on.
 
 ## PSUs 101
-
 
 ### How Power Supplies Work for Noobs
 The PSU takes AC 120~240V from the socket, electricity goes through one side of the PSU and comes out the other side, turns it into 12VDC. There's also 5V & 3.3V rails for other components, but those are not really important. The motherboard can then take 12V and uses its VRMs to turn it into DC ~1.1-1.375V (depends on what you set it to, these are common safe voltages) for the CPU.
