@@ -464,7 +464,7 @@ So another way to think about it is with music. I like this idea by TechTechPota
 Standard music might have 142 beats per minute, that's the equivalent of hertz. So you have the regular cadence of 142 beats per minute. Now on every beat you can play multiple notes (Same with memory, but with transfers)
 So in say a minute which has 142 beats you could be playing 200 notes. but you don't say it's 200 beats per inute it's still 142.
 
-Some commonly seen arguments in the defence of MHz are: 
+### Some commonly seen arguments in the defence of MHz are: 
 1. No one cares. <br/>
 Well if no one cares then you don't mind the tech community changing and making sure that everything
 is in mega transfers per second.
