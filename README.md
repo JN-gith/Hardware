@@ -1,5 +1,11 @@
 # Hardware
 Information about all parts of hardware
+  1. [SSDs(#SSDs)
+  2. [Price](#price)
+  3. [B550 vs X570 Reality](#b550-vs-x570-reality)
+  4. [Futureproofing](#futureproofing)
+  5. [Conclusion](#conclusion)
+
 
 ## SSDs
 Information about memory and storage
