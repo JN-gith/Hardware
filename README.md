@@ -465,24 +465,24 @@ Standard music might have 142 beats per minute, that's the equivalent of hertz. 
 So in say a minute which has 142 beats you could be playing 200 notes. but you don't say it's 200 beats per inute it's still 142.
 
 Some commonly seen arguments in the defence of MHz are: 
-1. No one cares.
+1. No one cares. <br/>
 Well if no one cares then you don't mind the tech community changing and making sure that everything
 is in mega transfers per second.
 
-2.  it doesn't matter.
-if it doesn't matter then you don't mind everything changing to mega transfers per second, which was proven to be the correct unit.
+2. It doesn't matter. <br/>
+If it doesn't matter then you don't mind everything changing to mega transfers per second, which was proven to be the correct unit.
 
-3. Megahertz is correct because it's still per second
+3. Megahertz is correct because it's still per second <br/>
 I think this point was made clear already. The fact that hertz is a cycle per second, and on memory you're not doing a transfer every rising and falling edge of that clock cycle. the clock is consistent that's why it has the hertz. Mega
 transfers per second is a theoretical maximum if you did a transfer on every rise and fall of the clock cycle.But because you don't need to, it's not a cyclical nature therefore it's not a hertz measurement.
 
-4. Everyone calls it megahertz therefore it's more accessible.
+4. Everyone calls it megahertz therefore it's more accessible. <br/>
 Probably out of all the arguments this is probably the one that i would most agree with but technically i still disagree with it, because from a technical point of view the use of MHz is often times wrong, and DDR is not accounted.
 And this is because if it was just simple english, yeah sure the nature of words changes. A lot of people may say words are about communicating. But the point is that's for descriptive words, what we're talking about here is an engineering term and engineering is very specific. if you get your engineering wrong, if you use the wrong units. Thing won't end well, both for your study/job, and the project you're working on. now the point is that if everyone understands it therefore it's more
 accessible. While it is OUR job, as the enthusiast tech community. To use the correct units and terms, so people don't get them mixed up.
 The fact that the general public has been misguided for so long shouldn't be put on them. It should be put on the people who are communicating the science and the numbers that. So for example youtubers, tech enthusiasts in discords and even the marketing team of RAM manufacturers.
 
-5.  it will confuse everyone
+5. it will confuse everyone <br/>
 I don't think it will confuse people any further than they are already, with even manufacturers doing it wrong. Windows still showing RAM speeds like in the SDR era, and CPU-Z/HWINFO64 showing the correct units. There is a point at which you have to turn around and say, hey we've been saying this wrong it needs to be said right from now on.
 
 ## PSUs 101
