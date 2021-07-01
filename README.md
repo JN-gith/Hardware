@@ -396,6 +396,54 @@ and a great many partially marked units that are all over the place, with the mo
 *Rev.F is confirmed to come in ver3.22 sticks, but that doesn't leave a gap for Rev.E. It's wildly guessed that they may both appear under 3.22.
 ^Version number seen in the wild, IC unconfirmed.
 
+### The correct way of referring to DDR4 memory specifications:
+
+I'm going to actually talk you through, what the argument is all about. So let's take this kit of DDR4-3600 memory from Crucial as an example. It's listed as DDR4-3600 and this is what you'll see when you buy this memory everywhere online.
+You know it says DDR4-3200/3600/3800 but how memory actually works relies on its clock cycle. So a clock cycle is a standard square wave that goes up down up down up down. ![afbeelding](https://user-images.githubusercontent.com/76516169/124125664-2ebdfb80-da7a-11eb-8238-97e863df93cf.png)
+
+Which for example for this kit, runs at 1800MHz, but the point is when you open your cpu z tab you see 1800MHz, and not 3200MHz. That is the data rate of the signal from your cpu to your memory and the reason why we get 3600 from 1800 is that a transfer can occur on either the rise of your clock signal or the fall of your clock signal. (rising and falling or also commonly used, "leading and trailing").
+
+This is how we get double data rate. When we move to quad data rate(QDR) memory we're actually going to be taking four reads per cycle so the memory may still be running at 1800 megahertz but in qdr that will actually be running at 7200 mega transfers per second. So for every one cycle you're doing two transfers in ddr and for every one cycle you're doing four transfers in qdr. Now this all comes down to what we mean by one hertz hurts is usually written as a you know, an event per second. but it's actually a bit more complex than that. It's actually one cycle per second. hertz comes from the need to have a periodic timing. if something happens at one hertz it happens one time every second. If it happens at two hertz it's two times every second.
+
+When we're counting ddr memory transfers on the rising edge or the falling edge of the clock, people are saying: well you're doing two elements so that's two hertz, not just two transfers. And the point is that you can do a memory transfer or you can't do a memory transfer. It's not periodic because it's not constant. That's where it falls down on the per cycle rule. And if you actually look at the units of this calculation, the thing that you do a lot in maths, physics, chemistry, science and research is that you coalesce the standard units of the system. So if a hertz is a one cycle per second and you're doing it two transfers per cycle.
+Then the cycles cancel out and you get transfers per second, and that's the unit of memory transfer. (Cycles per second (C/s) * transfers per cycle (T/C) = transfers per second (T/s).
+
+So another way to think about it is with music. I like this idea by TechTechPotato because it is very similar to memory.
+Standard music might have 142 beats per minute, that's the equivalent of hertz. So you have the regular cadence of 142 beats per minute. Now on every beat you can play multiple notes (Same with memory, but with transfers)
+So in say a minute which has 142 beats you could be playing 200 notes. but you don't say it's 200 beats per inute it's still 142.
+
+Some commonly seen arguments in the defence of MHz are: 
+1. No one cares.
+
+Well if no one cares then you don't mind the tech community changing and making sure that everything
+is in mega transfers per second.
+
+2.  it doesn't matter.
+if it doesn't matter then you don't mind everything changing to mega transfers per second, which was proven to be the correct unit.
+
+3. Megahertz is correct because it's still per second
+I think this point was made clear already. The fact that hertz is a cycle per second, and on memory you're not doing a transfer every rising and falling edge of that clock cycle. the clock is consistent that's why it has the hertz. Mega
+transfers per second is a theoretical maximum if you did a transfer on every rise and fall of the clock cycle.But because you don't need to, it's not a cyclical nature therefore it's not a hertz measurement.
+
+4. Everyone calls it megahertz therefore it's more accessible.
+Probably out of all the arguments this is probably the one that i would most agree with but technically i still disagree with it, because from a technical point of view the use of MHz is often times wrong, and DDR is not accounted.
+And this is because if it was just simple english, yeah sure the nature of words changes. A lot of people may say words are about communicating. But the point is that's for descriptive words, what we're talking about here is an engineering term and engineering is very specific. if you get your engineering wrong, if you use the wrong units. Thing won't end well, both for your study/job, and the project you're working on. now the point is that if everyone understands it therefore it's more
+accessible. While it is OUR job, as the enthusiast tech community. To use the correct units and terms, so people don't get them mixed up.
+
+The fact that the general public has been misguided for so long shouldn't be put on them. It should be put on the people who are communicating the science and the numbers that. So for example youtubers, tech enthusiasts in discords and even the marketing team of RAM manufacturers.
+
+5.  it will confuse everyone
+I don't think it will confuse people any further than they are already, with even manufacturers doing it wrong. Windows still showing RAM speeds like in the SDR era, and CPU-Z/HWINFO64 showing the correct units. There is a point at which you have to turn around and say, hey we've been saying this wrong it needs to be said right from now on.
+
+
+
+
+
+
+
+
+
+
 ## PSUs 101
 
 
