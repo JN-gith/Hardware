@@ -237,6 +237,7 @@ Conclusion is that X570 is not a generation leap over B550 even remotely. It has
 - USB 3.2 Gen 2 front header (B550 only has Gen 1)
 - You want to spend more than $300 on a motherboard
 
+### [ More Resources ]
 
 https://www.youtube.com/watch?v=zDxFbAhu4Bo&&ab_channel=Steve%27sHardware <br/>
 
