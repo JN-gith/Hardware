@@ -193,7 +193,15 @@ Even looking back at the power loss vs current output, our 50A rated power stage
 ## Conclusion
 VRMs temperatures are hard to decipher if you don't know what you are looking for. Blindly stating VRMs are absolutely irrelevant loses all credibility in that person's statement. My suggestion is to get a motherboard that won't thermal throttle your processor or easily degrade, and after that, it doesn't matter if you're not overclocking. If you are, then we start looking at configurations, amperage ratings, input/output filters, and heatsinks.
 
-### X570 vs B550 and why you probably shouldn't be buying a X570 motherboard for your Ryzen 5000 processor
+# X570 vs B550 and why you probably shouldn't be buying a X570 motherboard for your Ryzen 5000 processor
+  1. [PCIE Gen 4](#pcie-gen-4)
+  2. [Price](#price)
+  3. [B550 vs X570 Reality](#b550-vs-x570-reality)
+  4. [Futureproofing](#futureproofing)
+  5. [Conclusion](#conclusion)
+
+# Introduction
+A lot of what I am going to say here is very subject to exceptions, so plase read the conclusion for the full list on times when to get a X570 motherboard if I didn't discuss it in the paragraphs specifically. **Credits to WhoopityLongJohn for co-authoring this write-up.**
 
 ## PCIE Gen 4
 * There has been a lot of buzz around "PCIE Gen 4", an improvement over Gen 3 which improves upon the total bus bandwidth allowing more data to be transferred. The easiest difference to point out between B550 and X570 is that B550 only has a single x16 Gen 4 lane and a x4 for the first M.2 slot whereas all the general lane PCIE and NVME slots are PCIE Gen 4 on X570. However, this is completely irrelevant for most users. In fact, users who are actually using more than one PCIE Gen 4 NVME drive have either a big bank account (generally irresponsible) or more likely to move over to xTR4 because chances are they are doing professional work. 
@@ -228,6 +236,7 @@ Conclusion is that X570 is not a generation leap over B550 even remotely. It has
 - Wanting to use chipset as VM passthrough
 - USB 3.2 Gen 2 front header (B550 only has Gen 1)
 - You want to spend more than $300 on a motherboard
+
 
 https://www.youtube.com/watch?v=zDxFbAhu4Bo&&ab_channel=Steve%27sHardware <br/>
 
