@@ -466,7 +466,6 @@ So in say a minute which has 142 beats you could be playing 200 notes. but you d
 
 Some commonly seen arguments in the defence of MHz are: 
 1. No one cares.
-
 Well if no one cares then you don't mind the tech community changing and making sure that everything
 is in mega transfers per second.
 
