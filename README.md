@@ -2,10 +2,10 @@
 Information about all parts of hardware
   1. [SSD](#SSDs)
   2. [Coolers](#Coolers)
-  3. [Motherboards](#Motherboards 101)
-  4. [RAM](#RAM 101)
-  5. [PSU](#PSUs 101)
-  6. [Fans](#Fans by realcelicahours)
+  3. [Motherboards](#Motherboards-101)
+  4. [RAM](#RAM-101)
+  5. [PSU](#PSUs-101)
+  6. [Fans](#Fans-by-realcelicahours)
 
 
 ## SSDs
