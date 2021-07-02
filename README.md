@@ -1,5 +1,5 @@
 # Hardware
-Information about all parts of hardware
+Information about hardware
   1. [SSD](#SSDs)
   2. [Coolers](#Coolers)
   3. [Motherboards](#Motherboards-101)
