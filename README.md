@@ -466,7 +466,7 @@ So in say a minute which has 142 beats you could be playing 200 notes. but you d
 
 ### Why this is important to use correctly now, looking at the future of DDR5
 DDR5 uses a split bus, you can look at this like dual channel, but on one DIMM (even if it absolutely is not that, the pointers of each bus can actually overlap, it just gives you some kind of idea)
-So DDR5-6400 is the same effective speed as DDR4-3200, which is 3200MHz, because the bus clock on both is 1600MHz. But because of the split bus, the bandwith on DDR5 is double of the DDR4. This is also why using MT/s is so important, because of the split bus.
+So DDR5-6400 is the same effective speed as DDR4-3200, which is 3200MHz, because the bus clock on both is 1600MHz. But because of the split bus, the bandwith on DDR5 is double of the DDR4. This is also why using MT/s is so important. DDR5-6400 is 6400 MT/s, 3200 MHz effective clock, 1600MHz bus clock, 400/200 MHz module clock
 
 
 ### Some commonly seen arguments in the defence of MHz are: 
