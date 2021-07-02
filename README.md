@@ -447,7 +447,7 @@ and a great many partially marked units that are all over the place, with the mo
 *Rev.F is confirmed to come in ver3.22 sticks, but that doesn't leave a gap for Rev.E. It's wildly guessed that they may both appear under 3.22.
 ^Version number seen in the wild, IC unconfirmed.
 
-### The correct way of referring to DDR4 memory specifications:
+### The correct way of referring to DDR4 and DDR5 memory specifications:
 
 I'm going to actually talk you through, what the argument is all about. So let's take this kit of DDR4-3600 memory from Crucial as an example. It's listed as DDR4-3600 and this is what you'll see when you buy this memory everywhere online.
 You know it says DDR4-3200/3600/3800 but how memory actually works relies on its clock cycle. So a clock cycle is a standard square wave that goes up down up down up down. ![afbeelding](https://user-images.githubusercontent.com/76516169/124127260-cc65fa80-da7b-11eb-8560-f20b7894d7bf.png)
@@ -463,6 +463,11 @@ Then the cycles cancel out and you get transfers per second, and that's the unit
 So another way to think about it is with music. I like this idea by TechTechPotato because it is very similar to memory.
 Standard music might have 142 beats per minute, that's the equivalent of hertz. So you have the regular cadence of 142 beats per minute. Now on every beat you can play multiple notes (Same with memory, but with transfers)
 So in say a minute which has 142 beats you could be playing 200 notes. but you don't say it's 200 beats per inute it's still 142.
+
+### Why this is important to use correctly now, looking at the future of DDR5
+DDR5 uses a split bus, you can look at this like dual channel, but on one DIMM (even if it absolutely is not that, the pointers of each bus can actually overlap, it just gives you some kind of idea)
+So DDR5-6400 is the same effective speed as DDR4-3200, which is 3200MHz, because the bus clock on both is 1600MHz. But because of the split bus, the bandwith on DDR5 is double of the DDR4. This is also why using MT/s is so important, because of the split bus.
+
 
 ### Some commonly seen arguments in the defence of MHz are: 
 1. No one cares. <br/>
@@ -480,7 +485,7 @@ transfers per second is a theoretical maximum if you did a transfer on every ris
 Probably out of all the arguments this is probably the one that i would most agree with but technically i still disagree with it, because from a technical point of view the use of MHz is often times wrong, and DDR is not accounted.
 And this is because if it was just simple english, yeah sure the nature of words changes. A lot of people may say words are about communicating. But the point is that's for descriptive words, what we're talking about here is an engineering term and engineering is very specific. if you get your engineering wrong, if you use the wrong units. Thing won't end well, both for your study/job, and the project you're working on. now the point is that if everyone understands it therefore it's more
 accessible. While it is OUR job, as the enthusiast tech community. To use the correct units and terms, so people don't get them mixed up.
-The fact that the general public has been misguided for so long shouldn't be put on them. It should be put on the people who are communicating the science and the numbers that. So for example youtubers, tech enthusiasts in discords and even the marketing team of RAM manufacturers.
+The fact that the general public has been misguided for so long shouldn't be put on them. It should be put on the people who are communicating the science and the numbers that. So for example youtubers, tech enthusiasts in discords and even the marketing team of RAM manufacturers. This also happens in windows, with the task manager. This is not windows being stupid, the complete opposite even. Because for some DIMMs it reports the bus rate for others the "effective" speed. This is DIMM dependant, for example, Crucial shows bus rate.
 
 5. It will confuse everyone <br/>
 I don't think it will confuse people any further than they already are, with even manufacturers doing it wrong. Windows still showing RAM speeds like in the SDR era, and CPU-Z/HWINFO64 showing the correct units. There is a point at which you have to turn around and say, hey we've been saying this wrong, it needs to be said right from now on.
