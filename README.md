@@ -193,6 +193,10 @@ Even looking back at the power loss vs current output, our 50A rated power stage
 ## Conclusion
 VRMs temperatures are hard to decipher if you don't know what you are looking for. Blindly stating VRMs are absolutely irrelevant loses all credibility in that person's statement. My suggestion is to get a motherboard that won't thermal throttle your processor or easily degrade, and after that, it doesn't matter if you're not overclocking. If you are, then we start looking at configurations, amperage ratings, input/output filters, and heatsinks.
 
+## Intel Powerlimits
+Basically Intel has a long term (PL1) and short term (PL2) power limit + duration (tau) in place for a CPU. If you have a very heavy load utilizing all 12 threads of the 11400 it'll use the power its allowed to reach the max frequency (configured by Intel), if the power required for that exceeds the long term power limit (65W PL1 default) it'll boost to the highest it can for the short term power limit (154W PL2 default) for as long as it's allowed to do so (28s tau default), after which it'll use the highest clockspeeds achievable with the long term power limit. ![afbeelding](https://user-images.githubusercontent.com/76516169/124383656-e860da80-dccd-11eb-817d-6321cbba3f43.png)
+
+
 # X570 vs B550 and why you probably shouldn't be buying a X570 motherboard for your Ryzen 5000 processor
   1. [PCIE Gen 4](#pcie-gen-4)
   2. [Price](#price)
