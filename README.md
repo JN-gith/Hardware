@@ -1,5 +1,5 @@
 # Hardware
-Information about hardware
+Information about hardware, not all subjects are included, mainly because I don't care about them.
   1. [SSD](#SSDs)
   2. [Coolers](#Coolers)
   3. [Motherboards](#Motherboards-101)
