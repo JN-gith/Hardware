@@ -16,6 +16,7 @@ Great Arcticle on HMB in NVME Drives: https://www.ncbi.nlm.nih.gov/pmc/articles/
 Game Loading Compared: https://www.techspot.com/review/2116-storage-speed-game-loading/ <br/>
 Newmaxx SSD Sheet: https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0 <br/>
 Real Life Span of SSDs Tested (6 years old): https://techreport.com/review/27909/the-ssd-endurance-experiment-theyre-all-dead/ <br/>
+Recommended drives for all pricepoints and workloads: https://github.com/lQUBEXl/Gamezoid-Consumer-SSD-Buying-Guide/blob/main/README.md <br/>
 
  
 ### Hardware
