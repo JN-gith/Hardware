@@ -66,7 +66,7 @@ DRAM-less SSDs are often relatively inexpensive (with a few exceptions) and are 
 
 These SSDs do not have a DRAM cache beyond the minimum required by the controller itself and therefore save the index of files on NAND flash, which is slower. And can therefore often drop rapidly at their speed, making it feel a lot slower, at worst (in combination with a slow controller and slow/low quality NAND) almost equivalent to a modern CMR 7200rpm hdd. 
 
-This is mainly a problem with some 2.5'' SATA SSDs, as some DRAM-less NVMe SSDs use HMB as mentioned above, which uses part of the internal RAM as DRAM cache for the SSD. It is also possible that an SLC write cache is used, where the SSD instead of 3 bits/layer writes only 1 and then transfers it to a 3 bit system when not in use. Because of this, the writing will be (almost) as fast as a good DRAM Sata or sometimes even NVMe. Some good examples of this are SN550, Z330, MP33 and A60.
+This is mainly a problem with some 2.5'' SATA SSDs, as some DRAM-less NVMe SSDs use HMB as mentioned above, which uses part of the internal RAM as DRAM cache for the SSD. It is also possible that an SLC write cache is used, where the SSD instead of 3 bits/layer writes only 1 and then transfers it to a 3 bit system when not in use. Because of this, the writing will in most cases (granted it's a quality drive) as fast as a lower end NVMe + DRAM (e.g A2000). Some good examples of this are SN550, Z330, MP33 and A60.
 
 The only reason to buy a DRAM-less  SSD should be to upgrade an older system for faster boot times, as secondary storage or in other tasks where the speed of a good SSD is not necessarily needed. Ideally not at all since low capacity NVME drives using HMB are often very cheap.
 
