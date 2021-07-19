@@ -11,7 +11,7 @@ Information about hardware, not all subjects are included, mainly because I don'
 ## SSDs
 Information about memory and storage
 
-### Resources
+### [ Resources ]
 Great Arcticle on HMB in NVME Drives: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7051071/ <br/>
 Game Loading Compared: https://www.techspot.com/review/2116-storage-speed-game-loading/ <br/>
 Newmaxx SSD Sheet: https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0 <br/>
@@ -19,11 +19,11 @@ Real Life Span of SSDs Tested (6 years old): https://techreport.com/review/27909
 Recommended drives for all pricepoints and workloads: https://github.com/lQUBEXl/Gamezoid-Consumer-SSD-Buying-Guide/blob/main/README.md <br/>
 
  
-### Hardware
+### [ Hardware ]
 
 Solid state drives, or SSDs, are non-volatile storage devices made up of a few basic components. The choice and combination of these components determines the drive's performance and its intended role. Basic structure of an SSD-
 
-### Controller
+### [ Controller ]
 
 Controllers are basically specialized RISC devices - reduced instruction set, in contrast to complex - that are optimized for real-time, low latency operations and lots of them (IOPS). These type of embedded devices, as made by ARM for example, are in everything - your car, your smartphone, embedded devices, etc. Most SSD controllers are based on the Cortex-R5 specifically which you can google for more information.
 
@@ -53,7 +53,7 @@ Components of a controller-
 
 10. ECC Engine- Error Checking & Correction are a key part of today’s SSD. ECC will correct up to a certain number of bits per block of data
 
-### Volatile memory (SRAM/DRAM)
+### [ Volatile memory ] (SRAM/DRAM) 
 
 Memory is volatile when it loses its data or contents on power loss. In the context of SSDs volatile memory is utilized to temporarily cache the controller's firmware, store information from read-only memory for debugging, manage controller functions, temporarily store boot code, and store various metadata (data about data) for use with the FTL. Enterprise drives often have power loss protection but it is not often found in consumer drives.
 https://en.wikipedia.org/wiki/Static_random-access_memory <br/>
@@ -80,7 +80,7 @@ The Toshiba RC100 SSD Review: Tiny Drive In A Big Market
 The FTL with regard to DRAM will have two parts: the allocator, which focuses on addressing, and a separate collector for garbage collection at the block level. The amount of DRAM required is dependent on the type of workload with random operations requiring more metadata accesses/updates than sequential
 Elements that can be stored and tracked within a SSD's DRAM cache--http://borecraft.com/files/w9TGR4MYH3.png
 
-Nand Flash
+[ Nand Flash ]
 
 https://www.silicon-power.com/blog/index.php/guides/nand-flash-memory-technology-basics/ <br/>
 TL;DR- 
@@ -191,10 +191,10 @@ If we resort to a SiC639 50A power stage (which is very common among B550 mother
 
 Even looking back at the power loss vs current output, our 50A rated power stage doesn't even have 50A labelled on the graph, it stops at 45A (continuously drains). While this is safe, the FET may be dead before its rated lifetime if we max out our temperature rating.
 
-## Conclusion
+## [ Conclusion ]
 VRMs temperatures are hard to decipher if you don't know what you are looking for. Blindly stating VRMs are absolutely irrelevant loses all credibility in that person's statement. My suggestion is to get a motherboard that won't thermal throttle your processor or easily degrade, and after that, it doesn't matter if you're not overclocking. If you are, then we start looking at configurations, amperage ratings, input/output filters, and heatsinks.
 
-## Intel Powerlimits
+## [ Intel Powerlimits ]
 Intel has a long term (PL1) and short term (PL2) power limit + duration (tau) in place for a CPU. If you have a very heavy load utilizing all 12 threads of the 11400 it'll use the power its allowed to reach the max frequency (configured by Intel), if the power required for that exceeds the long term power limit (65W PL1 default) it'll boost to the highest it can for the short term power limit (154W PL2 default) for as long as it's allowed to do so (28s tau default), after which it'll use the highest clockspeeds achievable with the long term power limit.
 
 Hardware unboxed made a video about this, and many people freaked out about board manufacturers making low end boards with 65W OOTB PL1. I strongly disagree with this. Mainly because it's quite safe to assume from a manufacturers POV, people who buy a cheap motherboard, don't buy a 3rd party cooler for their I3s and I5s. So why raise OOTB PL1 on these? It will in most cases only result in people being thermally limited, and maybe even thermal throttling. And even if people end up buying a 3rd party cooler, there is an option to manualy raise the PL's within the BIOS. People argue this is far too complicated for the regular user. Well, do you think a regular user even is aware of the OOTB PL's, or even what a power limit is? Regular people don't care, and don't know. All they want is a system without problems, which the low OOTB PL's exactly are meant to do.
@@ -209,24 +209,24 @@ Hardware unboxed made a video about this, and many people freaked out about boar
   4. [Futureproofing](#futureproofing)
   5. [Conclusion](#conclusion)
 
-# Introduction
+# [ Introduction ]
 A lot of what I am going to say here is very subject to exceptions, so plase read the conclusion for the full list on times when to get a X570 motherboard if I didn't discuss it in the paragraphs specifically. **Credits to WhoopityLongJohn for co-authoring this write-up.**
 
-## PCIE Gen 4
+## [ PCIE Gen 4 ]
 * There has been a lot of buzz around "PCIE Gen 4", an improvement over Gen 3 which improves upon the total bus bandwidth allowing more data to be transferred. The easiest difference to point out between B550 and X570 is that B550 only has a single x16 Gen 4 lane and a x4 for the first M.2 slot whereas all the general lane PCIE and NVME slots are PCIE Gen 4 on X570. However, this is completely irrelevant for most users. In fact, users who are actually using more than one PCIE Gen 4 NVME drive have either a big bank account (generally irresponsible) or more likely to move over to xTR4 because chances are they are doing professional work. 
 
 * Currently, some Gen 4 drives are actually worse (think E16 with its terrible burst pSLC) than mid/high-tier Gen 3 drives (that are cheaper) in terms of random speeds (are what determine how fast your games load) thereby rendering a consideration of Gen 4 moot for gaming. Oddly enough, some Gen 4 drives that *should* actually be better than current Gen 3 & 4 drives now--not because they are Gen 4, but because they have new controllers like Phison E18 or SM2267/SM2264--have their own issues currently. Even if you are eyeing a good PCIE Gen 4 drive (of which the controllers aren't really optimized themselves nor software on windows currently), the speed difference is less than a single percent (of sub minute load times, basically not noticeable). They are very few people who would benefit from a Gen 4 drive. To the people who say Gen 4 is faster because bigger number better, I raise three examples: only a hand's worth of drives are saturating the Gen 3 bus bandwidth, Intel Optane 905p, and the fact the S50 Lite does not even beat Gen 3 drives despite the fact it is termed "Gen 4".
 
 * As for the GPU lanes, not even the 3080 needs PCIE Gen 4. There have been tests to show that PCIE Gen 3 vs Gen 4 on a 3080 is less than 1% different (1% on 4k resolution is nothing much, as where the cards should be used). So Gen 4 is irrelevant currently, and if you're even considering the price point of B550 and X570, futureproofing is not an argument here since SLI is dead and NVME speed differences are pretty small. Secondly, B550 already has PCIE Gen 4 in the top x16 PCIE slot and first M.2 slot--only X570 has more of it. If you need multiple Gen 4 x16 lanes for using NVELINK with multiple-GPUs, you probably should be moving to Threadripper anyways.
 
-## Price
+## [ Price ]
 * First of all, the quality of the board (VRM configuration, heatsinks, memory traces) can determine how far you can push your CPU or RAM, but the B550 and X570 chipsets are no different in that regard. B550 is not an inherent downgrade from X570. Rather, it is X570 with features cut out that most people don't need, which also decreases cost. 
 
 * B550--currently--does not have very very expensive motherboards (B550 Unify-X is coming), so if you're dropping $500 on a motherboard, well I guess X570 is for you? The only real reason to get a X570 board is that a B550 board doesn't has something you want/need--which for most people is not an issue.
 
 * If we compare a B550 motherboard and a X570 motherboard at the same price, it is usual assumption that the B550 motherboard will have more features and better cooling solutions. Think of X570 with a premium on top of B550. In this perspective, we see that many of the lower-tier X570 boards are straight-up inferior than cheaper B550 boards (I'm looking at you MSI). We only really see good boards emerge from X570 past the $200 range of which there are still very very top tier B550 boards with more features (MSI X570 Tomahawk lacking some debugging features despite being more than $200 and tailored for overclocking--still a good board though). 
 
-## B550 vs X570 Reality
+## [ B550 vs X570 Reality ]
 * B550 vs X570 Extreme4? VRMs are essentially the same, B550 is cheaper, and has a ton of troubleshooting features that the X570 doesn’t have. B550 wins here. 
 * B550 vs X570 Aorus Master? VRM is **BETTER** on the B550, you get more rear USBs on B550, and it's cheaper. B550 wins again (yet both boards aren't really worth it. You have to deal with dual BIOS without switches on B550 and X570 is just outclassed at its price bracket)
 * You don't need a very expensive motherboard to get the features you want, and you don't need a pesky chipset fan to know it has nice features (a lot of X570 boards have controls for it but not all of them).
@@ -234,10 +234,10 @@ A lot of what I am going to say here is very subject to exceptions, so plase rea
 
 * In the mini-ITX arena, you only have one expansion slot on the motherboard anyways, so why get a more expensive X570 board? Yes, there is a X570i Strix for above $300 and the Crosshair Viii Impact for a lot more, but these boards don't offer much more in terms of features (C8I memory topology is worse than B550i Strix or B550i AX as per Buildzoid). Secondly, the VRMs on the B550 ITX boards is arguably better than their X570 equivalents (X570 just forces airflow through because of fans). Gigabyte B550i AX has 90 amp power stages which is pretty nice for the price.
 
-## Futureproofing
+## [ Futureproofing ]
 But let's move on to "futureproofing". I could add a ton of reasons why futureproofing is a bad idea conceptually, but here are the examples to disprove that. Zen 3 is the end of AM4 meaning that Zen 4 will be on a new socket type. If you want to upgrade from Zen 1, Zen +, Zen 2, Zen 3, to anything beyond, you will need a new motherboard, processor, and now DDR5 RAM within the next one to two years. So buying a very expensive motherboard now makes no sense in this lense considering you shouldn't be upgrading within a single socket.
 
-## Conclusion
+## [ Conclusion ]
 Conclusion is that X570 is not a generation leap over B550 even remotely. It has features most people don't care for and will make you pay extra for: 
 - Wanting multiple PCIE Gen 4 SSD's instead of just one 
 - Wanting multiple NVME SSDs without losing any SATA ports 
@@ -300,7 +300,7 @@ Usually only DDR4-3466 CL19-23-23 and DDR4-3200 CL18-21-21, which both are reaso
 
 Manually overclocking is where you go into the BIOS and, by hand, enter individual voltages, frequencies, and timings to maximize the performance out of your RAM kit. This can take a lot of hours to tune the timings and voltages to stable levels and then stress testing the system--not recommended for beginners.
  
-### There are three types of users that buy RAM:
+###  [ There are three types of users that buy RAM: ]
 1. No manual overclock, yes XMP -> Regular 3000/3200C15/16 kits (SpecTek, MFR, AFR, etc. -- can be a host of different dies, doesn't really matter in most cases)
 2. Yes, little manual overclock, no XMP -> Rev. E /SR Rev. B / CJR / DJR / Cheap B-die
 3. People who want to overclock a lot and get the most performance -> Properly binned B-die such as 3600 14-14-14-34 or even higher bins.
@@ -411,7 +411,7 @@ the breakdown of DDR4 Nanya is as follows basically <br/>
 and a great many partially marked units that are all over the place, with the most recent ones going pretty high and pretty tight (B-die-ish tRFC, almost flat  primaries, scales up to 1.45V w/o any degradation info as of now)
 
 
-## Identify your Corsair sticks:
+## [ Identify your Corsair sticks: ]
 
 
   | Version        | IC                                                           | Confirmed/presumed?              |
@@ -481,7 +481,7 @@ DDR5 uses a split bus, you can look at this like dual channel, but on one DIMM (
 So DDR5-6400 is the same effective speed as DDR4-3200, which is 3200MHz, because the bus clock on both is 1600MHz. But because of the split bus, the bandwith on DDR5 is double of the DDR4. This is also why using MT/s is so important. DDR5-6400 is 6400 MT/s, 3200 MHz effective clock, 1600MHz bus clock, 400/200 MHz module clock.
 
 
-### Some commonly seen arguments in the defence of MHz are: 
+### [ Some commonly seen arguments in the defence of MHz are: ]
 1. No one cares. <br/>
 Well if no one cares then you don't mind the tech community changing and making sure that everything
 is in mega transfers per second.
@@ -504,16 +504,16 @@ I don't think it will confuse people any further than they already are, with eve
 
 ## PSUs 101
 
-### How Power Supplies Work for Noobs
+### [ How Power Supplies Work for Noobs ]
 The PSU takes AC 120~240V from the socket, electricity goes through one side of the PSU and comes out the other side, turns it into 12VDC. There's also 5V & 3.3V rails for other components, but those are not really important. The motherboard can then take 12V and uses its VRMs to turn it into DC ~1.1-1.375V (depends on what you set it to, these are common safe voltages) for the CPU.
 
 120V 10A gets transformed into 12V 100A, then on the motherboard into 1.2V 1000A. (Current ratings are dependable. Remember, the PSU will only draw the power it needs).
 ⠀⠀
-### A Too Long Didn't Read on How to Pick a Power Supply
+### [ A Too Long Didn't Read on How to Pick a Power Supply ]
 
 If a manufacturer or brand didn't bother to even get an 80 Plus or ETA efficiency certification, it's not worth looking at for consumers. After that, there are very very few passable 80+ (white/no color) units so usually skip that too (MWE V2 is "acceptable" versus group regulated). Additionally, some manufacturers just slap a 80+ sticker on it without approval (or fake testing). At Bronze level it starts getting harder to discern what is and isn't a piece of crap. General baseline you want them to rate full or near full power on the 12V rail so a 650w power supply should be able to provide ~649w on the 12v rail and so on (generally means it's not group regulated). After that look for professional reviews/testing.
 ⠀⠀
-### How to Learn about Power Supplies
+### [ How to Learn about Power Supplies ]
 Power supplies are very complicated, and there's not a lot of modern day circuit diagrams of the exact units you're buying that you could reverse-think about how it works. Resistors, inductors, transformers, operational amplifiers, swtiching MOSFETs, capacitors, etc. can be all arranged in different ways or "topologies". Once you learn more in-depth about the units, you may realize that it's just the same thing over and over again, and the only fun comes when there is a weird unit that is made. (Yes Sohoo, I'm talking about you) 
 
 ### Note before reading this, if you want to read an explaination on PSUs by Aris, one of the most respectable and knowledgable guru's out there. Read this https://www.tomshardware.com/reviews/power-supplies-101,4193-14.html. Otherwise, have fun.
