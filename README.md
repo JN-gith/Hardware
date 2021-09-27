@@ -516,7 +516,8 @@ F0
 
 
 
-
+## Memory ranks visualised
+![afbeelding](https://user-images.githubusercontent.com/76516169/134937067-fb67e941-50d4-4cfa-bfbd-f7f7b3138ada.png)
 
 
 
