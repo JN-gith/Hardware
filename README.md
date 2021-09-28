@@ -1,6 +1,6 @@
 # Hardware
 Information about hardware, not all subjects are included, mainly because I don't care about them. Feel free to make suggestions if you have any. 
-I didn't write all of this myself, only partionally. I don't have sources because 1. I'm lazy <br/> 2. I don't remember since I started this a year ago <br/> 3. The information is spread across multiple servers, cba looking through all of them for sources. <br/>
+I didn't write all of this myself, only partionally. I don't have sources because <br/> 1. I'm lazy <br/> 2. I don't remember since I started this a year ago <br/> 3. The information is spread across multiple servers, cba looking through all of them for sources. <br/>
 
 I don't take credibility for this because of that reason, eventhough I put it together and also wrote subjects. I'm simply not looking forward to get people pissed in my DMs, eventhough the only purpose of this document is to help new techies learn about parts, and also for myself to make notes on interesting things people say. 
 
