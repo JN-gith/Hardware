@@ -1,5 +1,8 @@
 # Hardware
-Information about hardware, not all subjects are included, mainly because I don't care about them.
+Information about hardware, not all subjects are included, mainly because I don't care about them. I didn't write all of this myself, only partionally. I don't have sources because 1. I'm lazy 2. I don't remember since I started this a year ago 3. The information is spread across multiple servers, cba looking through all of them for sources. 
+
+I don't take credibility for this because of that reason, eventhough I put it together and also wrote subjects. I'm simply not looking forward to get people pissed in my DMs, eventhough the only purpose of this document is to help new techies learn about parts, and also for myself to make notes on interesting things people say. 
+
   1. [SSD](#SSDs)
   2. [Coolers](#Coolers)
   3. [Motherboards](#Motherboards-101)
@@ -202,7 +205,7 @@ Hardware unboxed made a video about this, and many people freaked out about boar
 ![afbeelding](https://user-images.githubusercontent.com/76516169/124383656-e860da80-dccd-11eb-817d-6321cbba3f43.png)
 
 
-# X570 vs B550 and why you probably shouldn't be buying a X570 motherboard for your Ryzen 5000 processor
+# X570 vs B550 and why you probably shouldn't be buying a X570 motherboard for your Ryzen 5000 processor by Qubex
   1. [PCIE Gen 4](#pcie-gen-4)
   2. [Price](#price)
   3. [B550 vs X570 Reality](#b550-vs-x570-reality)
@@ -315,7 +318,7 @@ So when people ask about what brand of RAM is the most "reliable", I like to tel
 
 Brands like Corsair, G.skill, etc. take the memory ICs they get from Samsung, SK Hynix, Nanya or whatever DRAM manufacturer they use, change or completely redesign a PCB for their sticks like adding extra capacitors or SMT (Surface-mount technology) on the back or making room for a RGB circuit, so the layout varies from module to module. In fact, the dominators are custom PCBs that allow the heatspreader to screw directly into the PCB. Others just copy the JEDEC PCB, and with the dies they bought, slap it on memory sticks and bin them to those speed bins.
 
-### [ tRAS ]
+### [ tRAS by alatron ]
 tRAS is the minimum command period between the activate and precharge commands. In simple terms it is the minimum number of clock cycles between these two commands. This delay is a minimum delay and thus is an 'extension timing' meaning that it extends a command period, and it does not dictate anything directly. An extension timing does not dictate a command period, it just dictates the minimum clock cycles for a command period. tRAS as a timing has no performance impact when an activate to activate command period is extended by the tRC timing. This concept is later explained in the tRC section as it is crucial to first have an understanding of the tRC timing.
 Common myths: There are many different common myths for a 'minimum' tRAS value or a value to set tRAS to based off other timings, and none of these rules are correct. As mentioned before tRAS is a minimum command period delay, meaning that the ACT to PRE command period can go over this value without a problem, it just cannot take less clocks then tRAS. It is not a fixed value that dictates a fixed time period like many have been led to believe. Common 'rules' for a minimum tRAS I have heard are the following: <br/>
 CL + tRCD = tRAS <br/>
@@ -335,7 +338,7 @@ Thus, if tRAS is below or equal to tRCDWR + tCWL + BC + tWR or tRCD + tRTP (whic
 Why does the write have to include the CAS command and the burst?
 The write must include the tCWL timing and the burst due to the prefetch architecture which was explained early. With a read the data is in the memory and gets transferred to the prefetch buffer after 1 physically memory core clock cycle. This means that what ever happens to the data in the physical memory past this point does not matter. The row can be closed without problems as the data is already in the prefetch buffer. Though however with writes the data is being moved into the memory, so the data has to go into the memory before the row can be closed. Thus writing needs extra steps before the row can be closed.
 
-### [ tRC ]
+### [ tRC by alatron ]
 It is recommended to read the tRAS section before reading about tRC.
 tRC is the minimum command period between two activate commands and an activate and refresh command for the same bank of memory, this delay like tRAS is a minimum delay and thus it is an 'extension timing'.
 
@@ -635,26 +638,22 @@ and a great many partially marked units that are all over the place, with the mo
 *Rev.F is confirmed to come in ver3.22 sticks, but that doesn't leave a gap for Rev.E. It's wildly guessed that they may both appear under 3.22.
 ^Version number seen in the wild, IC unconfirmed.
 
-### The correct way of referring to DDR4 and DDR5 memory specifications:
+### The correct way of referring to DDR4 and DDR5 memory specifications by Ian (techtechpotato) : 
 
-I'm going to actually talk you through, what the argument is all about. So let's take this kit of DDR4-3600 memory from Crucial as an example. It's listed as DDR4-3600 and this is what you'll see when you buy this memory everywhere online.
+I'm going to actually talk you through what the argument is all about. So let's take this kit of DDR4-3600 memory from Crucial as an example. It's listed as DDR4-3600 and this is what you'll see when you buy this memory everywhere online.
 You know it says DDR4-3200/3600/3800 but how memory actually works relies on its clock cycle. So a clock cycle is a standard square wave that goes up down up down up down. ![afbeelding](https://user-images.githubusercontent.com/76516169/124127260-cc65fa80-da7b-11eb-8560-f20b7894d7bf.png)
 
 
-Which for example for this kit, runs at 1800MHz, but the point is when you open your cpu z tab you see 1800MHz, and not 3600MHz. That is the data rate of the signal from your cpu to your memory and the reason why we get 3600 from 1800 is that a transfer can occur on either the rise of your clock signal or the fall of your clock signal. (rising and falling or also commonly used, "leading and trailing").
+Which for example for this kit, runs at 1800MHz, but the point is when you open your CPU-Z tab you see 1800MHz, and not 3600MHz. That is the data rate of the signal from your cpu to your memory and the reason why we get 3600 from 1800 is that a transfer can occur on either the rise of your clock signal or the fall of your clock signal. (rising and falling or also commonly used, "leading and trailing").
 
-This is how we get double data rate. When we move to quad data rate(QDR) memory we're actually going to be taking four reads per cycle so the memory may still be running at 1800MHz but in qdr that will actually be running at 7200 mega transfers per second(MT/s). So for every one cycle you're doing two transfers in ddr and for every one cycle you're doing four transfers in qdr. Now this all comes down to what we mean by one hertz. One hertz is usually written as you know, an event per second. But it's actually a bit more complex than that. It's actually one cycle per second. hertz comes from the need to have a periodic timing. If something happens at one hertz, it happens one time every second. If it happens at two hertz it's two times every second.
+This is how we get double data rate. When we move to quad data rate(QDR) memory we're actually going to be taking four reads per cycle, so the memory may still be running at 1800MHz but in QDR that will actually be running at 7200 mega transfers per second (MT/s). So for every one cycle, you're doing two transfers in DDR and  four transfers in QDR. Now this all comes down to what we mean by one hertz. One hertz is usually written as you know, an event per second. But it's actually a bit more complex than that. It's actually one cycle per second. hertz comes from the need to have a periodic timing. If something happens at one hertz, it happens one time every second. If it happens at two hertz it's two times every second.
 
-When we're counting ddr memory transfers on the rising edge or the falling edge of the clock, people are saying: well you're doing two elements so that's two hertz, not just two transfers. And the point is that you can do a memory transfer or you can't do a memory transfer. It's not periodic because it's not constant. That's where it falls down on the per cycle rule. And if you actually look at the units of this calculation, the thing that you do a lot in maths, physics, chemistry, science and research is that you coalesce the standard units of the system. So if a hertz is a one cycle per second and you're doing it two transfers per cycle.
+When we're counting DDR memory transfers on the rising edge or the falling edge of the clock, people are saying: well you're doing two elements so that's two hertz, not just two transfers. And the point is that you can do a memory transfer or you can't do a memory transfer. It's not periodic because it's not constant. That's where it falls down on the per cycle rule. And if you actually look at the units of this calculation, the thing that you do a lot in maths, physics, chemistry, science and research is that you coalesce the standard units of the system. So if a hertz is one cycle per second and you're doing it two transfers per cycle.
 Then the cycles cancel out and you get transfers per second, and that's the unit of memory transfer. (Cycles per second (C/s) * transfers per cycle (T/C) = transfers per second (T/s).
 
 So another way to think about it is with music. I like this idea by TechTechPotato because it is very similar to memory.
 Standard music might have 142 beats per minute, that's the equivalent of hertz. So you have the regular cadence of 142 beats per minute. Now on every beat you can play multiple notes (Same with memory, but with transfers)
 So in say a minute which has 142 beats you could be playing 200 notes. but you don't say it's 200 beats per inute it's still 142.
-
-### Why this is important to use correctly now, looking at the future of DDR5
-DDR5 uses a split bus, you can look at this like dual channel, but on one DIMM (even if it absolutely is not that, the pointers of each bus can actually overlap, it just gives you some kind of idea)
-So DDR5-6400 is the same effective speed as DDR4-3200, which is 3200MHz, because the bus clock on both is 1600MHz. But because of the split bus, the bandwith on DDR5 is double of the DDR4. This is also why using MT/s is so important. DDR5-6400 is 6400 MT/s, 3200 MHz effective clock, 1600MHz bus clock, 400/200 MHz module clock.
 
 
 ### [ Some commonly seen arguments in the defence of MHz are: ]
